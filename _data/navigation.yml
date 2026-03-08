@@ -6,13 +6,11 @@ main:
     description: "Benjamin's resume."
   #- title: "Categories"
   #  url: /categories/
-  - title: "Projects"
-    url: /projects/
-    description: "Info about projects Benjamin has worked on."
+  #- title: "Projects"
+  #  url: /projects/
+  #  description: "Info about projects Benjamin has worked on."
   #- title: "Tags"
   #  url: /tags/
-  - title: "Credentials"
-    url: /credentials/
-    description: "Credentials and Badges Benjamin has earned."
-  #- title: "About"
-  #  url: /about/
+  #- title: "Credentials"
+  #  url: /credentials/
+  #  description: "Credentials and Badges Benjamin has earned."

@@ -16,11 +16,11 @@
 title: Portfolio for Benjamin Ryan
 email: benryan.aviationtraining@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Aviation professional turned Cybersecurity Analyst.
-twitter_username: ""
+  Aviation professional turned ICT professional.
+#twitter_username: ""
 github_username: Diffracted84
-minimal_mistakes_skin: aqua
-search: true
+minimal_mistakes_skin: default
+search: false
 
 # Build settings
 markdown: kramdown
@@ -33,6 +33,7 @@ timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_t
 
 include:
   - _pages
+  - _jobs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -65,7 +66,7 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://Diffracted84.github.io/"
+      url: "https://Diffracted84.github.io/portfolio"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ben-ryan-67b391100/"
@@ -114,7 +115,7 @@ defaults:
     values:
       layout: single
       author_profile: false
-      share: true
+      share: false
 
 #category_archive:
 #  type: liquid
@@ -126,6 +127,7 @@ collections:
   jobs:
     output: true
     order:
-      - rex.md
-      - sft.md
-      - altocap.md
+      - 00-rex.md
+      - 01-sft.md
+      - 02-altocap.md
+      - 03-phoenix.md

@@ -2,9 +2,9 @@
 order_number: 1
 title: "Regional Express"
 excerpt: "Employment History - REX"
-header:
-  image: /assets/images/rex-header.jpg
-  teaser: /assets/images/bio-photo.jpg
+#header:
+#  image: /assets/images/rex-header.jpg
+#  teaser: /assets/images/bio-photo.jpg
 sidebar:
   - image: /assets/images/rex.jpg
     image_alt: "REX Logo"

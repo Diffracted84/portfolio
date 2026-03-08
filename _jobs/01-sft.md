@@ -2,11 +2,11 @@
 order_number: 2
 title: "Sydney Flight Training"
 excerpt: "Employment History - Sydney Flight Training"
-header:
-  image: /assets/images/placeholder.jpg
-  teaser: /assets/images/foo-bar-identity-th.jpg
+#header:
+#  image: /assets/images/placeholder.jpg
+#  teaser: /assets/images/foo-bar-identity-th.jpg
 sidebar:
-  - image: /assets/images/SFT.avif
+  - image: /assets/images/sft.jpg
     image_alt: "SFT Logo"
 
   - title: "Role"
