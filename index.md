@@ -1,0 +1,24 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: splash
+author_profile: false
+feature_row:
+  - image_path: /assets/images/bio-photo.jpg
+    alt: "placeholder image 1"
+    title: "Placeholder 1"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: /assets/images/AvatarMaker.png
+    alt: "placeholder image 2"
+    title: "Placeholder 2"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: /projects
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/AvatarMaker.svg
+    title: "Placeholder 3"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+---
+
+{% include feature_row %}
