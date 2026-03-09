@@ -13,7 +13,7 @@ sidebar:
     text: "Operations Manager - Day VFR"
     
   - title: "Employed"
-    text: "Fed 2022 - Jul 2023"
+    text: "Feb 2022 - Jul 2023"
 
   - title: "Location"
     text: Bankstown, NSW, Australia
