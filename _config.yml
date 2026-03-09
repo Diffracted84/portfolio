@@ -16,7 +16,7 @@
 title: Portfolio for Benjamin Ryan
 email: benryan.aviationtraining@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Aviation professional turned ICT professional.
+  Portfolio for Benjamin Ryan.
 #twitter_username: ""
 github_username: Diffracted84
 minimal_mistakes_skin: default
@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "Benjamin Ryan"
   avatar : "/assets/images/AvatarMaker.svg"
-  bio    : "Aviation professional turned Cybersecurity Analyst."
+  bio    : "Aviation professional turned aspiring ICT professional."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
