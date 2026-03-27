@@ -1,10 +1,10 @@
 ---
 order_number: 2
 title: "Sydney Flight Training"
-excerpt: "Employment History - Sydney Flight Training"
-#header:
-#  image: /assets/images/placeholder.jpg
-#  teaser: /assets/images/foo-bar-identity-th.jpg
+excerpt: Bankstown, Feb 2022 - Jul 2023"
+header:
+  image: /assets/images/sft-header.jpg
+  teaser: /assets/images/sft-teaser.jpg
 sidebar:
   - image: /assets/images/sft.jpg
     image_alt: "SFT Logo"
@@ -13,7 +13,7 @@ sidebar:
     text: "Operations Manager - Day VFR"
     
   - title: "Employed"
-    text: "Fed 2022 - Jul 2023"
+    text: "Feb 2022 - Jul 2023"
 
   - title: "Location"
     text: Bankstown, NSW, Australia

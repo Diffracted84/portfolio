@@ -34,6 +34,7 @@ timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_t
 include:
   - _pages
   - _jobs
+  - _projects
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -61,7 +62,7 @@ plugins:
 
 author:
   name   : "Benjamin Ryan"
-  avatar : "/assets/images/AvatarMaker.svg"
+  avatar : /assets/images/AvatarMaker.png
   bio    : "Aviation professional turned Cybersecurity Analyst."
   links:
     - label: "Website"
@@ -126,8 +127,16 @@ defaults:
 collections:
   jobs:
     output: true
-    order:
-      - 00-rex.md
-      - 01-sft.md
-      - 02-altocap.md
-      - 03-phoenix.md
+    sort_by: order_number
+  university:
+    output: true
+    sort_by: title
+  diploma:
+    output: false
+    sort_by: title
+  certificate:
+    output: false
+    sort_by: title
+  credentials:
+    output: false
+    sort_by: title

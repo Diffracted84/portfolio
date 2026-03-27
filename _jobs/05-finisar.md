@@ -1,10 +1,10 @@
 ---
 order_number: 5
 title: "Finisar"
-excerpt: "Employment History - Finisar"
-#header:
-#  image: /assets/images/altocap-header.jpg
-#  teaser: /assets/images/foo-bar-identity-th.jpg
+excerpt: "Sydney, Jan 2007 - Jul 2015"
+header:
+  image: /assets/images/finisar-header.png
+  teaser: /assets/images/finisar-teaser.jpg
 sidebar:
   - image: /assets/images/finisar.jpg
     image_alt: "Finisar Logo"

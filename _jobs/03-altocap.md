@@ -1,10 +1,10 @@
 ---
 order_number: 3
 title: "Altocap Flight School"
-excerpt: "Employment History - Altocap"
-#header:
-#  image: /assets/images/altocap-header.jpg
-#  teaser: /assets/images/foo-bar-identity-th.jpg
+excerpt: "Camden, Oct 2016 - Jan 2022"
+header:
+  image: /assets/images/altocap-header.jpg
+  teaser: /assets/images/altocap-teaser.jpg
 sidebar:
   - image: /assets/images/altocap.png
     image_alt: "Altocap Logo"

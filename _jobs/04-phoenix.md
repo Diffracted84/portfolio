@@ -1,10 +1,10 @@
 ---
 order_number: 4
 title: "Phoenix Aero Club"
-excerpt: "Employment History - PAC"
-#header:
-#  image: /assets/images/altocap-header.jpg
-#  teaser: /assets/images/foo-bar-identity-th.jpg
+excerpt: "Camden, Mar 2016 - Oct 2016"
+header:
+  image: /assets/images/pac-header.jpg
+  teaser: /assets/images/pac-teaser.jpg
 sidebar:
   - image: /assets/images/pac.jpg
     image_alt: "PAC Logo"

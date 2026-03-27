@@ -1,10 +1,10 @@
 ---
-order_number: 1
-title: "Regional Express"
-excerpt: "Employment History - REX"
-#header:
-#  image: /assets/images/rex-header.jpg
-#  teaser: /assets/images/bio-photo.jpg
+number: 1
+title: Regional Express
+excerpt: Sydney, Aug 2023 - Present
+header:
+  image: /assets/images/rex-header.jpg
+  teaser: /assets/images/rex-teaser.jpg
 sidebar:
   - image: /assets/images/rex.jpg
     image_alt: "REX Logo"
