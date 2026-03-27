@@ -62,8 +62,8 @@ plugins:
 
 author:
   name   : "Benjamin Ryan"
-  avatar : "/assets/images/AvatarMaker.svg"
-  bio    : "Aviation professional turned Cybersecurity Analyst."
+  avatar : "/assets/images/AvatarMaker.png"
+  bio    : "Aviation professional turned IT Support."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -98,10 +98,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
   # _pages
   - scope:
       path: "_pages"
@@ -115,7 +115,15 @@ defaults:
       type: jobs
     values:
       layout: single
-      author_profile: false
+      author_profile: true
+      share: false
+  # _credentials
+  - scope:
+      path: ""
+      #type: jobs
+    values:
+      layout: single
+      author_profile: true
       share: false
 
 #category_archive:
@@ -127,8 +135,11 @@ defaults:
 collections:
   jobs:
     output: true
-    order:
-      - 00-rex.md
-      - 01-sft.md
-      - 02-altocap.md
-      - 03-phoenix.md
+  university:
+    output: false
+  diplomas:
+    output: false
+  certificates:
+    output: false
+  credentials:
+    output: false
