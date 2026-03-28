@@ -2,6 +2,7 @@
 order_number: 5
 title: "Finisar"
 excerpt: "Sydney, Jan 2007 - Jul 2015"
+author_profile: false
 header:
   image: /assets/images/finisar-header.png
   teaser: /assets/images/finisar-teaser.jpg

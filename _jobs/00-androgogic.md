@@ -2,6 +2,7 @@
 number: 0
 title: Androgogic
 excerpt: Remote, Apr 2026 - Present
+author_profile: false
 header:
   image: /assets/images/androgogic-header.png
   teaser: /assets/images/androgogic-teaser.png
