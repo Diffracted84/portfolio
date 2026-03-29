@@ -1,7 +1,7 @@
 ---
 title: Download
 layout: single
-permalink: /Files/
+permalink: /files/
 author_profile: true
 ---
 Please select the file you would like to download.
