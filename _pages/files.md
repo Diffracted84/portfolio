@@ -1,10 +1,12 @@
 ---
 title: Download
 layout: single
-permalink: /files/
+permalink: /Files/
 author_profile: true
 ---
 Please select the file you would like to download.
 
-1. [General Resume]({{ "/assets/Files" }}{% link General.pdf %}) - *Current at March 2026*
-2. [Aviation Resume]({{ "/assets/Files" }}{% link Aviation.pdf %}) - *Current at 31st October 2025*
+|   |**Effective Date**|**File**|
+|---|---|---|
+|1.|March 2026|[General Resume](https://diffracted84.github.io/portfolio/assets/Files/General.pdf)|
+|2.|31st October 2025|[Aviation Specific Resume](https://diffracted84.github.io/portfolio/assets/Files/Aviation.pdf)|

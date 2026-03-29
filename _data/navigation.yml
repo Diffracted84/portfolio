@@ -12,5 +12,5 @@ main:
   #- title: "Tags"
   #  url: /tags/
   - title: "Qualifications"
-    url: /credentials/
+    url: /qualifications/
     description: "Qualifications and Credentials Benjamin has earned."

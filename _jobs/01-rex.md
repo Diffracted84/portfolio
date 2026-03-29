@@ -2,7 +2,7 @@
 number: 1
 title: Regional Express
 excerpt: Sydney, Aug 2023 - Present
-author_profile: false
+permalink: /about/REX
 header:
   image: /assets/images/rex-header.jpg
   teaser: /assets/images/rex-teaser.jpg

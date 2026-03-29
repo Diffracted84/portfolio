@@ -7,12 +7,12 @@ author_profile: false
 
 header:
   overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_filter: "0.0"
   overlay_image: /assets/images/splash-header.jpg
   actions:
     - label: "Download CV"
       url: /files/
-  caption: "Image by Axel Sifuentes from Pixabay"
+  caption: "Image by [Axel Sifuentes](https://pixabay.com/users/axelsteven2000-20170836/) from [Pixabay](https://pixabay.com)"
   excerpt: "Welcome to my Portfolio Site."
 
 intro:

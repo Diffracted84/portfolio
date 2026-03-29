@@ -1,8 +1,8 @@
 ---
 order_number: 2
 title: "Sydney Flight Training"
-excerpt: Bankstown, Feb 2022 - Jul 2023"
-author_profile: false
+excerpt: "Bankstown, Feb 2022 - Jul 2023"
+permalink: /about/SFT
 header:
   image: /assets/images/sft-header.jpg
   teaser: /assets/images/sft-teaser.jpg

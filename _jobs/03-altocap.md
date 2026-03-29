@@ -2,7 +2,7 @@
 order_number: 3
 title: "Altocap Flight School"
 excerpt: "Camden, Oct 2016 - Jan 2022"
-author_profile: false
+permalink: /about/Altocap
 header:
   image: /assets/images/altocap-header.jpg
   teaser: /assets/images/altocap-teaser.jpg

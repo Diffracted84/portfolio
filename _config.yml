@@ -92,13 +92,23 @@ footer:
       url: "https://www.facebook.com/"
 
 defaults:
+  #/assets/download
+  - scope:
+      path: "/assets/download"
+    values:
+      image: false
+  #/assets/images
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: false
       comments: false
       share: false
@@ -109,14 +119,14 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       read_time: false
       comments: false
       share: false
       related: false
   # _jobs
   - scope:
-      path: ""
+      path: "_jobs"
       type: jobs
     values:
       layout: single
@@ -126,10 +136,11 @@ defaults:
       comments: false
       share: false
       related: false
-  # _credentials
+  # _qualifications
   - scope:
-      path: ""
-      #type: jobs
+      path: "_qualifications"
+      type: single
+      #collection: jobs
     values:
       layout: single
       author_profile: false
