@@ -2,7 +2,7 @@
 title: My Qualifications
 layout: collection
 permalink: /qualifications
-collection: credentials
+#collection: credentials
 entries_layout: grid
 author_profile: true
 ---

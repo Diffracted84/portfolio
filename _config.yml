@@ -34,8 +34,8 @@ timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_t
 include:
   - _pages
   - _jobs
-  - _projects
-  - _credentials
+  #- _projects
+  #- _credentials
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -112,7 +112,7 @@ defaults:
       read_time: false
       comments: false
       share: false
-      related: false
+      related: true
   # _pages
   - scope:
       path: "_pages"
