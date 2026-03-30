@@ -37,7 +37,7 @@ feature_row:
     alt: "Image of a lego person sitting on a book."
     title: "Qualifications"
     excerpt: "Dive into my education and qualifications."
-    url: /credentials
+    url: /qualifications
     btn_label: "Investigate"
     btn_class: "btn--inverse"
 ---
