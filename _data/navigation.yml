@@ -4,11 +4,12 @@ main:
   - title: "About"
     url: /about/
     description: "Benjamin's resume."
-  #- title: "Categories"
-  #  url: /categories/
   - title: "Projects"
     url: /projects/
     description: "Info about projects Benjamin has worked on."
+  #- title: "Project SideScroller"
+  #  url: /projects/scroller
+  #  description: "My current game development project."
   #- title: "Tags"
   #  url: /tags/
   - title: "Qualifications"
