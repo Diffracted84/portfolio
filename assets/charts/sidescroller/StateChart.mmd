@@ -1,0 +1,18 @@
+---
+id: ce5149bd-bc16-4935-baa9-b45aafe1056e
+---
+stateDiagram-v2
+    [*] --> Splash
+    Splash --> Menu
+    Menu --> Credits
+    Credits --> Menu
+    Menu --> Settings
+    Settings --> Menu
+    Menu --> Gameplay
+    Gameplay --> Pause
+    Pause --> Gameplay
+    Pause --> Reset
+    Pause --> Menu
+    Reset --> Gameplay
+    Menu --> Quit
+    Quit --> [*]
