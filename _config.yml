@@ -137,7 +137,6 @@ defaults:
       share: false
       read_time: false
       comments: false
-      share: false
       related: false
   # _qualifications
   - scope:
@@ -150,7 +149,6 @@ defaults:
       share: false
       read_time: false
       comments: false
-      share: false
       related: false
 
 #category_archive:
