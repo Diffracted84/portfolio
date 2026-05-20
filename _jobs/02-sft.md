@@ -4,10 +4,10 @@ title: "Sydney Flight Training"
 excerpt: "Bankstown, Feb 2022 - Jul 2023"
 permalink: /about/SFT
 header:
-  image: /assets/images/sft-header.jpg
-  teaser: /assets/images/sft-teaser.jpg
+  image: /assets/images/jobs/sft/sft-header.jpg
+  teaser: /assets/images/jobs/sft/sft-teaser.jpg
 sidebar:
-  - image: /assets/images/sft.jpg
+  - image: /assets/images/jobs/sft/sft.jpg
     image_alt: "SFT Logo"
 
   - title: "Role"

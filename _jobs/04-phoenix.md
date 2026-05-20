@@ -4,10 +4,10 @@ title: "Phoenix Aero Club"
 excerpt: "Camden, Mar 2016 - Oct 2016"
 permalink: /about/PAC
 header:
-  image: /assets/images/pac-header.jpg
-  teaser: /assets/images/pac-teaser.jpg
+  image: /assets/images/jobs/pac/pac-header.jpg
+  teaser: /assets/images/jobs/pac/pac-teaser.jpg
 sidebar:
-  - image: /assets/images/pac.jpg
+  - image: /assets/images/jobs/pac/pac.jpg
     image_alt: "PAC Logo"
 
   - title: "Role"

@@ -4,10 +4,10 @@ title: "Finisar"
 excerpt: "Sydney, Jan 2007 - Jul 2015"
 permalink: /about/Finisar
 header:
-  image: /assets/images/finisar-header.png
-  teaser: /assets/images/finisar-teaser.jpg
+  image: /assets/images/jobs/finisar/finisar-header.png
+  teaser: /assets/images/jobs/finisar/finisar-teaser.jpg
 sidebar:
-  - image: /assets/images/finisar.jpg
+  - image: /assets/images/jobs/finisar/finisar.jpg
     image_alt: "Finisar Logo"
 
   - title: "Role"

@@ -4,10 +4,10 @@ title: Androgogic
 excerpt: Remote, Apr 2026 - Present
 permalink: /about/Androgogic
 header:
-  image: /assets/images/androgogic-header.png
-  teaser: /assets/images/androgogic-teaser.png
+  image: /assets/images/jobs/androgogic/androgogic-header.png
+  teaser: /assets/images/jobs/androgogic/androgogic-teaser.png
 sidebar:
-  - image: /assets/images/androgogic.jpg
+  - image: /assets/images/jobs/androgogic/androgogic.jpg
     image_alt: "Androgogic Logo"
 
   - title: "Role"

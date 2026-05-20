@@ -4,10 +4,10 @@ title: Regional Express
 excerpt: Sydney, Aug 2023 - Present
 permalink: /about/REX
 header:
-  image: /assets/images/rex-header.jpg
-  teaser: /assets/images/rex-teaser.jpg
+  image: /assets/images/jobs/rex/rex-header.jpg
+  teaser: /assets/images/jobs/rex/rex-teaser.jpg
 sidebar:
-  - image: /assets/images/rex.jpg
+  - image: /assets/images/jobs/rex/rex.jpg
     image_alt: "REX Logo"
 
   - title: "Role"

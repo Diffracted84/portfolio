@@ -4,10 +4,10 @@ title: "Altocap Flight School"
 excerpt: "Camden, Oct 2016 - Jan 2022"
 permalink: /about/Altocap
 header:
-  image: /assets/images/altocap-header.jpg
-  teaser: /assets/images/altocap-teaser.jpg
+  image: /assets/images/jobs/altocap/altocap-header.jpg
+  teaser: /assets/images/jobs/altocap/altocap-teaser.jpg
 sidebar:
-  - image: /assets/images/altocap.png
+  - image: /assets/images/jobs/altocap/altocap.png
     image_alt: "Altocap Logo"
 
   - title: "Role"
