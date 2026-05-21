@@ -7,6 +7,8 @@ date: 2026-05-21
 #tags: [pygame, scroller]
 #project:  "SideScroller"
 
+author: Casual
+
 header:
 #  image: /assets/images/Sidescroller/Statemachine/StateDiag.png
   teaser: /assets/images/Sidescroller/Statemachine/StateDiag.png

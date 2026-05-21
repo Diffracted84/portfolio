@@ -7,11 +7,9 @@ main:
   - title: "Projects"
     url: /projects/
     description: "Info about projects Benjamin has worked on."
-  #- title: "Project SideScroller"
-  #  url: /projects/scroller
-  #  description: "My current game development project."
-  #- title: "Tags"
-  #  url: /tags/
   - title: "Qualifications"
     url: /qualifications/
-    description: "Qualifications and Credentials Benjamin has earned."
+    description: "Qualifications and credentials Benjamin has earned."
+#  - title: "Aviation"
+#    url: /aviation/
+#    description: "A brief overview of Benjamin's aviation career."

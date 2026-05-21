@@ -8,6 +8,8 @@ author_profile: true
 entries_layout: grid
 classes: wide
 
+author: Casual
+
 header:
   image: /assets/images/androgogic-header.png
   teaser: /assets/images/androgogic-teaser.png

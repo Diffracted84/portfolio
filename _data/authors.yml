@@ -1,0 +1,55 @@
+# _data/authors.yml
+
+Professional:
+  name: Benjamin Ryan
+  bio : "Aviation professional turned IT Support."
+  avatar : "/assets/images/corporate.png"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://Diffracted84.github.io/portfolio"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ben-ryan-67b391100/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Diffracted84"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/zest.mainia"
+
+Casual:
+  name: Benjamin Ryan
+  bio : "Aviation professional turned IT Support."
+  avatar : "/assets/images/casual.png"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://Diffracted84.github.io/portfolio"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ben-ryan-67b391100/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Diffracted84"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/zest.mainia"
+
+Pilot:
+  name: Benjamin Ryan
+  bio : "Aviation professional turned IT Support."
+  avatar : "/assets/images/pilot.png"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://Diffracted84.github.io/portfolio"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ben-ryan-67b391100/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Diffracted84"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/zest.mainia"

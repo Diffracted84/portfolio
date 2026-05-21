@@ -1,12 +1,12 @@
 ---  
-title: "Projects"
+title: "Aviation"
 layout: collection
-permalink: /projects/
-collection: projects
+permalink: /aviation/
+collection: aviation
 author_profile: true
 show_excerpts: true
 
-author: Casual
+author: Pilot
 
 header:
   overlay_color: "#ff0000"

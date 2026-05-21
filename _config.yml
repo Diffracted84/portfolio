@@ -64,7 +64,7 @@ plugins:
 
 author:
   name   : "Benjamin Ryan"
-  avatar : "/assets/images/AvatarMaker.png"
+  avatar : "/assets/images/corporate.png"
   bio    : "Aviation professional turned IT Support."
   links:
     - label: "Website"
@@ -127,6 +127,18 @@ defaults:
       comments: true
       share: true
       related: true
+  # rspspc
+  - scope:
+      path: ""
+      type: rspspc
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # _jobs
   - scope:
       path: "_jobs"
@@ -165,6 +177,10 @@ collections:
     output: false
   scroller:
     output: true
+  rspspc:
+    output: true
+  quals:
+    output: false
   university:
     output: false
   diplomas:
