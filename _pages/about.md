@@ -8,7 +8,7 @@ entries_layout: grid
 show_excerpts: true
 classes: wide
 
-author: Professional Ben
+author: Professional
 
 header:
   overlay_color: "#000000"

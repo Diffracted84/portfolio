@@ -4,12 +4,12 @@ main:
   - title: "About"
     url: /about/
     description: "Benjamin's resume."
-  - title: "Projects"
-    url: /projects/
-    description: "Info about projects Benjamin has worked on."
-  - title: "Qualifications"
-    url: /qualifications/
-    description: "Qualifications and credentials Benjamin has earned."
+#  - title: "Projects"
+#    url: /projects/
+#    description: "Info about projects Benjamin has worked on."
+#  - title: "Qualifications"
+#    url: /qualifications/
+#    description: "Qualifications and credentials Benjamin has earned."
 #  - title: "Aviation"
 #    url: /aviation/
 #    description: "A brief overview of Benjamin's aviation career."
