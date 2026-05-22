@@ -1,7 +1,7 @@
 ---
 title: My Qualifications
-layout: collection
-permalink: /qualifications
+layout: single #collection
+permalink: /qualifications/
 #collection: credentials
 entries_layout: grid
 author_profile: true
