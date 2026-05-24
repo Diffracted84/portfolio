@@ -11,6 +11,7 @@ author: Casual
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
+  caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
 
 #gallery:
