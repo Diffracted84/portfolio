@@ -29,12 +29,12 @@ feature_row:
     btn_class: "btn--inverse"
   - image_path: /assets/images/splash/splash-project.jpg
     alt: "Image of lego people constructing."
-    title: "Projects - Coming Soon"
+    title: "Projects"
     caption: Image by [kirill_makes_pics](https://pixabay.com/users/kirill_makes_pics-5203613/) from [Pixabay](https://pixabay.com/)
     excerpt: "Look at the projects I have been involved with."
-  #  url: /projects
-  #  btn_label: "Read More"
-  #  btn_class: "btn--inverse"
+    url: /projects
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
   - image_path: /assets/images/splash/splash-qualification.jpg
     alt: "Image of a lego person sitting on a book."
     title: "Qualifications - Coming Soon"

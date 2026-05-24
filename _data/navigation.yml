@@ -4,9 +4,9 @@ main:
   - title: "About"
     url: /about/
     description: "Benjamin's resume."
-#  - title: "Projects"
-#    url: /projects/
-#    description: "Info about projects Benjamin has worked on."
+  - title: "Projects"
+    url: /projects/
+    description: "Info about projects Benjamin has worked on."
 #  - title: "Qualifications"
 #    url: /qualifications/
 #    description: "Qualifications and credentials Benjamin has earned."
