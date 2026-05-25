@@ -2,9 +2,11 @@
 title: The State Machine
 excerpt: Building the backbone of the game.
 permalink: /projects/sidescroller/statemachine
-date: 2026-05-21
+date: 2026-05-25
 categories: [Programming, Python, Game Dev]
 tags: [pygame, scroller]
+share: false
+related: false
 #project:  "SideScroller"
 
 author: Casual
@@ -14,24 +16,14 @@ header:
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
 
-#gallery:
-#  - url: /assets/images/unsplash-gallery-image-1.jpg
-#    image_path: assets/images/unsplash-gallery-image-1-th.jpg
-#    alt: "placeholder image 1"
-#  - url: /assets/images/unsplash-gallery-image-2.jpg
-#    image_path: assets/images/unsplash-gallery-image-2-th.jpg
-#    alt: "placeholder image 2"
-#  - url: /assets/images/unsplash-gallery-image-3.jpg
-#    image_path: assets/images/unsplash-gallery-image-3-th.jpg
-#    alt: "placeholder image 3"
-words_per_minute: 100
+words_per_minute: 200
 ---
 ## Overview
 I have been playing with making a game using the pygame framework for a few months now. It has been a learning curve, but I am starting to get the hang of it.
 A few days ago I realised that game is ultimately a state machine. There are several states within this machine that need to be considered. So I started exploring how I would refactor my infant project to make states a reality.
 
 ## Planning
-To start with I needed to do some research on how to implement. I have had previous experience using a state machine in LabVIEW, but not in python. I found what I thought was a really good pair of tutorials on pygame/python implementation. You can find these in the [Attibution](#attribution) section and the end of this post. If this is something you are looking to do, these are worth a watch.
+To start with I needed to do some research on how to implement. I have had previous experience using a state machine in LabVIEW, but not in python. I found what I thought was a really good pair of tutorials on pygame/python implementation. You can find these in the [Attributions](#attribution) section and the end of this post. If this is something you are looking to do, these are worth a watch.
 Secondly, I needed to plan what my states are going to be. A bit of brainstorming and I came up with the plan below:
 <figure>
   <img src="{{ '/assets/images/projects/sidescroller/statemachine/StateDiag.png' | relative_url }}" alt="State Diagram">
@@ -79,8 +71,10 @@ def draw(self, surface: pg.Surface) -> None:
 ```
 ### The Stack
 For those that don't know, a quick intro to a queue:
-> [!NOTE] 
-> A queue is a collection of ordered entities. Typcally an entity becomes an element of the queue by joining at the back of the queue. As elements are processed they drop out. A bit like a line of people waiting to enter a club.
+
+**NOTE**
+A queue is a collection of ordered entities. Typcally an entity becomes an element of the queue by joining at the back of the queue. As elements are processed they drop out. A bit like a line of people waiting to enter a club.
+{: .notice--info}
 Now that is out of the way, a typical queue acts as a buffer for data that needs processing. It waits in line until its turn and then it leaves the queue.
 <figure>
   <img src="{{ '/assets/images/projects/sidescroller/statemachine/DataQueue.png' | relative_url }}" alt="Data Queue">
@@ -92,7 +86,7 @@ A stack is similar, but works on a *Last In - First Out* basis. A stack is more 
 This is useful for states as you usually wish to go to the state defined last, but to have a queue of states to return to. This is particularly handy for things like in-game menus.
 
 ### An Example from my Game
-We play the game from a GameLogic class. The user can enter a pause menu by pressing 'P'. The state transition in the GameLogic class would look a little something like below:
+We play the game from a GameLogic class. The user can enter a pause menu by pressing ```P``` key. The state transition in the GameLogic class would look a little something like below:
 ```python
 def update(self, dt: float, actions: dict) -> None:
     #Has a pause action been registered?
@@ -101,9 +95,10 @@ def update(self, dt: float, actions: dict) -> None:
         new_state = Pause(self.game)
         new_state.enter_state()
 ```
-> [!TIP]
-> We haven't exited the GameLogic state, as we may wish to resume the game.
-When in the puase state, the game can be unpaused and the game resumed. The Pause state would look like below:
+**INFO:**
+We haven't exited the GameLogic state, as we may wish to resume the game.
+{: .notice--info}
+When in the pause state, the game can be unpaused and the game resumed. The Pause state would look like below:
 ```python
 def update(self, dt: float, actions: dict) -> None:
     #has the user made a menu selection?
