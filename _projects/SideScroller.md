@@ -11,8 +11,8 @@ classes: wide
 author: Casual
 
 header:
-  image: /assets/images/androgogic-header.png
-  teaser: /assets/images/androgogic-teaser.png
+  image: /assets/images/projects/sidescroller/header.png
+  #teaser: /assets/images/projects/sidescroller/teaser.png
 ---
 I have started making a simple game in ***Python*** to learn some new development skills.
 
