@@ -40,7 +40,7 @@ feature_row:
     title: "Qualifications - Coming Soon"
     caption: Image by [facebook827](https://pixabay.com/users/facebook827-3332528/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4924237) from [Pixabay](https://pixabay.com/)
     excerpt: "Dive into my education and qualifications."
-  #  url: /credentials
+  #  url: /qualifications
   #  btn_label: "Investigate"
   #  btn_class: "btn--inverse"
   #- image_path: /assets/images/splash/splash-aviation.jpg
