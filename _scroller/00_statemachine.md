@@ -2,7 +2,7 @@
 title: The State Machine
 excerpt: Building the backbone of the game.
 permalink: /projects/sidescroller/statemachine
-date: 2026-05-25
+date: 2026-05-26
 categories: [Programming, Python, Game Dev]
 tags: [pygame, scroller]
 share: false
