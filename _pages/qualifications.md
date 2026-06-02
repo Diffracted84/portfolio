@@ -1,14 +1,19 @@
 ---
 title: My Qualifications
 layout: collection
-permalink: /qualifications
-#collection: credentials
-entries_layout: grid
+permalink: /qualifications/
+collection: certifications
 author_profile: true
+show_excerpts: true
+entries_layout: grid
+classes: wide
+
+author: Professional
+
+header:
+  #overlay_color: "#ff0000"
+  overlay_filter: rgba(255,0,0,0.07)
+  overlay_image: /assets/images/projects/header.png
+  alt: Abstract dot pattern background image
+  caption: Image by [Tomislav Jakupec](https://pixabay.com/users/tommyvideo-3092371/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5719221) from [Pixabay](https://pixabay.com)
 ---
-### Work in Progress
-Please check back again soon for exciting developments.
-<figure>
-  <img src="{{ '/assets/images/wip.jpg' | relative_url }}" alt="Work in Progress">
-</figure>
-*Attribute:* Image by Elias from [Pixabay]("https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1914029")
