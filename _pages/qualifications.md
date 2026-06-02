@@ -2,9 +2,9 @@
 title: My Qualifications
 layout: collection
 permalink: /qualifications/
-collection: certifications
+collection: qualifications
 author_profile: true
-show_excerpts: true
+show_excerpts: false
 entries_layout: grid
 classes: wide
 

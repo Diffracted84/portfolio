@@ -9,7 +9,7 @@ share: false
 related: false
 #project:  "SideScroller"
 
-author: Casual
+author: Professional
 
 header:
   #image: /assets/images/projects/sidescroller/statemachine/header.png
@@ -18,17 +18,28 @@ header:
 
 words_per_minute: 200
 ---
+{{ % teaser % }}
+
 ##Particulars##
+
 ###Issued:###
+
 3rd February 2026
+
 ###Issued By:###
+
 Moodle Academy
+
 ###Course:###
+
 Moodle Admin Basics program and certificate
+
 ###Awarded For:###
+
 Successfully completing the Moodle Academy Moodle Admin Basics program.
 ---
 ##Criteria:##
+
 Complete ALL of the listed requirements.
 - Users must complete the course"Moodle Admin Basics program and certificate" with minimum grade of 80
 - ALL of the following activities are completed:

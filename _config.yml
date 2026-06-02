@@ -164,7 +164,7 @@ defaults:
       related: false
   # _certificates
   - scope:
-      path: "_certificates"
+      path: ""
       type: certificates
     values:
       layout: single
