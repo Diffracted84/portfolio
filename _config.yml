@@ -43,7 +43,7 @@ include:
   - _pages
   - _jobs
   - _projects
-  #- _qualifications
+  - _qualifications
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -68,7 +68,6 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-log_adapter
   #- jekyll-archives
 
 author:
@@ -173,7 +172,7 @@ defaults:
       related: false
   # _certificates
   - scope:
-      path: ""
+      path: "_certificates"
       type: certificates
     values:
       layout: single

@@ -1,5 +1,5 @@
 ---
-title: Certificates
+title: Certifications
 index: 2
 layout: collection
 permalink: /qualifications/certificates/
@@ -19,4 +19,3 @@ header:
   image: /assets/images/projects/sidescroller/header.png
   teaser: /assets/images/projects/sidescroller/teaser.png
 ---
-Please see my certifications here.
