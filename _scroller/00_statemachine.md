@@ -1,22 +1,26 @@
 ---
 title: The State Machine
 excerpt: Building the backbone of the game.
-permalink: /projects/sidescroller/statemachine
+index: 0
+permalink: /projects/scroller/statemachine
 date: 2026-05-26
+words_per_minute: 200
+
 categories: [Programming, Python, Game Dev]
 tags: [pygame, scroller]
+
 share: false
 related: false
 #project:  "SideScroller"
 
 author: Casual
 
+classes: wide
+
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
-
-words_per_minute: 200
 ---
 ## Overview
 I have been playing with making a game using the pygame framework for a few months now. It has been a learning curve, but I am starting to get the hang of it.
@@ -74,7 +78,7 @@ For those that don't know, a quick intro to a queue:
 
 **NOTE**
 A queue is a collection of ordered entities. Typcally an entity becomes an element of the queue by joining at the back of the queue. As elements are processed they drop out. A bit like a line of people waiting to enter a club.
-{: .notice--info}
+{: .notice--success}
 Now that is out of the way, a typical queue acts as a buffer for data that needs processing. It waits in line until its turn and then it leaves the queue.
 <figure>
   <img src="{{ '/assets/images/projects/sidescroller/statemachine/DataQueue.png' | relative_url }}" alt="Data Queue">
@@ -97,7 +101,7 @@ def update(self, dt: float, actions: dict) -> None:
 ```
 **INFO:**
 We haven't exited the GameLogic state, as we may wish to resume the game.
-{: .notice--info}
+{: .notice--success}
 When in the pause state, the game can be unpaused and the game resumed. The Pause state would look like below:
 ```python
 def update(self, dt: float, actions: dict) -> None:

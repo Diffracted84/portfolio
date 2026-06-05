@@ -3,12 +3,15 @@ title: My Qualifications
 layout: collection
 permalink: /qualifications/
 collection: qualifications
-author_profile: true
-show_excerpts: false
-entries_layout: grid
-classes: wide
 
 author: Professional
+author_profile: true
+
+classes: wide
+show_excerpts: false
+entries_layout: list
+sort_by: index
+sort_order: forward
 
 header:
   #overlay_color: "#ff0000"

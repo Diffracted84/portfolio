@@ -1,7 +1,7 @@
 ---
 title: Project SideScroller
 layout: collection
-permalink: /sidescroller/
+permalink: /projects/scroller
 collection: scroller
 excerpt: "My little game dev project."
 author_profile: true

@@ -3,12 +3,15 @@ title: My Projects
 layout: collection
 permalink: /projects/
 collection: projects
-author_profile: true
-show_excerpts: true
-entries_layout: grid
-classes: wide
 
 author: Casual
+author_profile: true
+
+classes: wide
+show_excerpts: true
+entries_layout: grid
+sort_by: index
+sort_order: forward
 
 header:
   #overlay_color: "#ff0000"
