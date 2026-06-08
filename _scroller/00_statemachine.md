@@ -4,6 +4,7 @@ excerpt: Building the backbone of the game.
 index: 0
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
+last_modified_at: 2026-06-08T08:10:00+10:00
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
@@ -11,16 +12,18 @@ tags: [pygame, scroller]
 
 share: false
 related: false
-#project:  "SideScroller"
 
 author: Casual
-
-classes: wide
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
+
+toc: true
+toc_label: Jump to Section
+toc_icon: book
+toc_sticky: true
 ---
 ## Overview
 I have been playing with making a game using the pygame framework for a few months now. It has been a learning curve, but I am starting to get the hang of it.

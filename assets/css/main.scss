@@ -1,0 +1,17 @@
+---
+search: false
+---
+/*===test===*/
+$link-color: blue;
+
+/*===system typefaces===*/
+$serif      : "Manrope", Georgia, Times, serif;
+$sans-serif : -apple-system, BlinkMacSystemFont, "Inter", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$monospace  : Monaco, Consolas, "Lucida Console", monospace;
+
+/*===@ imports===*/
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials

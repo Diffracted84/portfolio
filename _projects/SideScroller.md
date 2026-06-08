@@ -1,5 +1,6 @@
 ---
 title: Project SideScroller
+index: 0
 layout: collection
 permalink: /projects/scroller
 collection: scroller
