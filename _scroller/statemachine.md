@@ -1,5 +1,6 @@
 ---
 title: The State Machine
+index: 0
 excerpt: Building the backbone of the game.
 index: 0
 permalink: /projects/scroller/statemachine

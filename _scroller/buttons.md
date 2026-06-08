@@ -1,5 +1,6 @@
 ---
 title: Buttons
+index: 1
 excerpt: Building a class for user interaction.
 index: 0
 permalink: /projects/scroller/buttons

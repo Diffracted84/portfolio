@@ -5,11 +5,20 @@ search: false
 $link-color: blue;
 
 /*===system typefaces===*/
-$serif      : "Manrope", Georgia, Times, serif;
-$sans-serif : -apple-system, BlinkMacSystemFont, "Inter", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$serif      : Manrope, serif;
+$sans-serif : Inter, Arial, sans-serif;
 $monospace  : Monaco, Consolas, "Lucida Console", monospace;
 
 /*===@ imports===*/
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/assets/fonts/manrope.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/inter.ttf') format('ttf');
+}
 
 @charset "utf-8";
 

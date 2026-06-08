@@ -3,11 +3,6 @@ title: Moodle Admin Basics
 index: 0
 excerpt: Awarded for successfully completing the Moodle Academy Moodle Admin Basics program.
 permalink: /qualifications/certificates/moodle-basic-admin
-#date: 2026-05-26
-words_per_minute: 200
-
-#categories: [Programming, Python, Game Dev]
-#tags: [pygame, scroller]
 
 share: false
 related: false
