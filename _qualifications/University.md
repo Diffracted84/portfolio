@@ -1,10 +1,10 @@
 ---
-title: Certifications
-index: 2
+title: University
+index: 0
 layout: collection
-permalink: /qualifications/certificates/
-collection: certificates
-excerpt: "Certificates and Micro-credentials"
+permalink: /qualifications/university/
+collection: university
+excerpt: "University qualifications"
 
 author: Professional
 author_profile: true

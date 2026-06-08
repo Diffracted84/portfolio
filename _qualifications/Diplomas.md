@@ -1,10 +1,10 @@
 ---
-title: Certifications
-index: 2
+title: Diplomas
+index: 1
 layout: collection
-permalink: /qualifications/certificates/
-collection: certificates
-excerpt: "Certificates and Micro-credentials"
+permalink: /qualifications/diplomas/
+collection: diplomas
+excerpt: "Diplomas and other tertiary certificates"
 
 author: Professional
 author_profile: true
