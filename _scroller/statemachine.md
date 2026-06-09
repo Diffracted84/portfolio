@@ -2,7 +2,6 @@
 title: The State Machine
 index: 0
 excerpt: Building the backbone of the game.
-index: 0
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
 last_modified_at: 2026-06-08T08:10:00+10:00

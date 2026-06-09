@@ -2,9 +2,9 @@
 title: Buttons
 index: 1
 excerpt: Building a class for user interaction.
-index: 0
 permalink: /projects/scroller/buttons
-date: 2026-06-08
+date: 2026-06-09
+last_modified_at: 2026-06-09T06:10:00+10:00
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
@@ -12,14 +12,50 @@ tags: [pygame, scroller]
 
 share: false
 related: false
-#project:  "SideScroller"
 
 author: Casual
-
-classes: wide
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
+
+single_layout_gallery:
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with header example"
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with comments and related posts"
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with comments and related posts"
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with comments and related posts"
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with comments and related posts"
+  - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
+    alt: "single layout with comments and related posts"
+
+toc: true
+toc_label: Jump to Section
+toc_icon: book
+toc_sticky: true
 ---
+## Overview
+The latest task I have given myself still isn't directly involved with making a game. It is making user interface buttons. I want the user to be able to navigate a menu screen with ease using a mouse and maybe later by keyboard. In my opinion, buttons are a great way to allow this.
+
+## What Makes a Good Button
+
+
+## The Parent Class
+
+
+## Procedural Buttons
+Somewhere in this document - where I want to put a *gallery* of images
+{% include gallery id="single_layout_gallery" caption="Caption Here" %}
+
+## Image Based Buttons
+
+
+## Conclusion
+
+
+## Attributions

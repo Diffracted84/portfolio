@@ -24,15 +24,15 @@ feature_row:
     title: "About"
     #caption: Image by [kirill_makes_pics](https://pixabay.com/users/kirill_makes_pics-5203613/) from [Pixabay](https://pixabay.com/)
     excerpt: "My work history is just a click away."
-    url: /about
+    url: /about/
     btn_label: "Find Out More"
     btn_class: "btn--warning"
   - image_path: /assets/images/splash/splash-project.png
     alt: "Image of man planting a tree."
     title: "Projects"
     #caption: Image by [kirill_makes_pics](https://pixabay.com/users/kirill_makes_pics-5203613/) from [Pixabay](https://pixabay.com/)
-    excerpt: "Look at the projects I have been involved with."
-    url: /projects
+    excerpt: "Look at my side projects."
+    url: /projects/
     btn_label: "Read More"
     btn_class: "btn--success"
   - image_path: /assets/images/splash/splash-qualification.jpg
@@ -40,7 +40,7 @@ feature_row:
     title: "Qualifications"
     #caption: Image by [facebook827](https://pixabay.com/users/facebook827-3332528/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4924237) from [Pixabay](https://pixabay.com/)
     excerpt: "Dive into my education and qualifications."
-    url: /qualifications
+    url: /qualifications/
     btn_label: "Investigate"
     btn_class: "btn--primary"
   #- image_path: /assets/images/splash/splash-aviation.jpg
@@ -48,7 +48,7 @@ feature_row:
   #  caption: Image by [Robert](https://pixabay.com/users/s2dent-208425/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342) from [Pixabay](<a href=")https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342)
   #  title: "Aviation"
   #  excerpt: "An overview of my aviation record."
-  #  url: /aviation
+  #  url: /aviation/
   #  btn_label: "Check It Out"
   #  btn_class: "btn--inverse"
 ---
