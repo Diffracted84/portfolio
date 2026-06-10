@@ -4,7 +4,7 @@ index: 0
 excerpt: Building the backbone of the game.
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
-last_modified_at: 2026-06-08T08:10:00+10:00
+last_modified_at: 2026-06-10T03:05+10:00
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
@@ -17,7 +17,7 @@ author: Casual
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
-  caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
+  caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
 
 toc: true

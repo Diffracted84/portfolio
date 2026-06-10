@@ -16,9 +16,10 @@ related: false
 author: Casual
 
 header:
-  image: /assets/images/projects/sidescroller/statemachine/header.png
-  caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
-  teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
+  image: /assets/images/projects/sidescroller/buttons/header.jpg
+  caption: Image by [nafeti_art](https://pixabay.com/users/nafeti_art-5143689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8120993) from [Pixabay](https://pixabay.com)
+  teaser: /assets/images/projects/sidescroller/buttons/teaser.jpg
+  teaser_caption: Image by [Peggy und Marco Lachmann-Anke](https://pixabay.com/users/peggy_marco-1553824/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1015629) from [Pixabay](https://pixabay.com/)
 
 single_layout_gallery:
   - image_path: /assets/images/projects/sidescroller/buttons/placeholder.jpg
