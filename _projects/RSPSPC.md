@@ -1,15 +1,14 @@
 ---
 title: RSPS P&C Website
 index: 1
-layout: collection
-permalink: /rspspc/
-collection: rspspc
 excerpt: "My volunteer work maintain a website."
-author_profile: true
-entries_layout: grid
-classes: wide
+layout: single
+permalink: /projects/rspspc
 
 author: Casual
+author_profile: true
+
+classes: wide
 
 header:
   image: /assets/images/projects/rspspc/header.png

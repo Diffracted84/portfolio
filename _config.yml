@@ -125,20 +125,8 @@ defaults:
       related: true
   # _scroller
   - scope:
-      path: ""
+      path: _scroller/"
       type: scroller
-    values:
-      layout: single
-      show_date: true
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # rspspc
-  - scope:
-      path: ""
-      type: rspspc
     values:
       layout: single
       show_date: true
@@ -162,7 +150,6 @@ defaults:
   - scope:
       path: "_qualifications"
       type: qualifications
-      #collection: jobs
     values:
       layout: single
       author_profile: false
