@@ -125,7 +125,7 @@ defaults:
       related: true
   # _scroller
   - scope:
-      path: _scroller/"
+      path: "_scroller"
       type: scroller
     values:
       layout: single
