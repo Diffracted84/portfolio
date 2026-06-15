@@ -36,21 +36,21 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--success"
   - image_path: /assets/images/splash/splash-qualification.png
-    alt: "Image of a lego person sitting on a book."
+    alt: "Image of man graduating university."
     title: "Qualifications"
     #caption: Image by [facebook827](https://pixabay.com/users/facebook827-3332528/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4924237) from [Pixabay](https://pixabay.com/)
-    excerpt: "Dive into my education and qualifications."
-    url: /qualifications/
-    btn_label: "Investigate"
-    btn_class: "btn--warning"
-  - image_path: /assets/images/splash/splash-aviation.png
-    alt: "Image of a lego person sitting on a book."
+    excerpt: "Coming Soon" #"Dive into my education and qualifications."
+  #  url: /qualifications/
+  #  btn_label: "Investigate"
+  #  btn_class: "btn--warning"
+  #- image_path: /assets/images/splash/splash-aviation.png
+  #  alt: "Image of a lego person sitting on a book."
   #  caption: Image by [Robert](https://pixabay.com/users/s2dent-208425/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342) from [Pixabay](<a href=")https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342)
-    title: "Aviation"
-    excerpt: "An overview of my aviation record."
-    url: /aviation/
-    btn_label: "Check It Out"
-    btn_class: "btn--info"
+  #  title: "Aviation"
+  #  excerpt: "An overview of my aviation record."
+  #  url: /aviation/
+  #  btn_label: "Check It Out"
+  #  btn_class: "btn--info"
 ---
     {% include feature_row id="intro" type="center" %}
     {% include feature_row %}
