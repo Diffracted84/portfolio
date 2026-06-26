@@ -135,6 +135,7 @@ defaults:
       comments: true
       share: true
       related: true
+  # _dragon
   # _jobs
   - scope:
       path: "_jobs"
@@ -183,6 +184,8 @@ collections:
   projects:
     output: false
   scroller:
+    output: true
+  dragon:
     output: true
   rspspc:
     output: true

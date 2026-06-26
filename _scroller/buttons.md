@@ -3,8 +3,8 @@ title: Buttons
 index: 1
 excerpt: Building a class for user interaction.
 permalink: /projects/scroller/buttons
-date: 2026-06-09
-last_modified_at: 2026-06-09T06:10:00+10:00
+date: 2026-06-27
+last_modified_at: 2026-06-26T23:10:00+10:00
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
