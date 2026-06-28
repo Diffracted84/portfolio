@@ -12,6 +12,9 @@ classes: wide
 author: Casual
 
 header:
-  image: /assets/images/projects/sidescroller/header.png
-  teaser: /assets/images/projects/sidescroller/teaser.png
+  image: /assets/images/projects/dragonmonkey/header.png
+  teaser: /assets/images/projects/dragonmonkey/teaser.png
 ---
+I have started making a GitHub Pages theme to learn some new development skills, and to ultimately use on this site. (I currently use a theme called Minimal Mistakes).
+
+**Please stay tuned for semi-regular updates in my game developer adventure.**
