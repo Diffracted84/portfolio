@@ -1,9 +1,198 @@
-# ===========================
-# Vanilla Defaults
-# ===========================
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-theme: dragon-monkey  #comment out to test remote theme
-remote_theme: null    #Diffracted84/dragon-monkey
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Portfolio for Ben Ryan
+email: benryan.aviationtraining@gmail.com
+description: >-
+  Portfolio for Ben Ryan.
+github_username: Diffracted84
+minimal_mistakes_skin: default
+search: false
 
-title: "Vanilla Test Site"
-description: "Testing Dragon Monkey theme defaults"
+url: "https://Diffracted84.github.io"
+baseurl: "/portfolio"
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+#show_taxonomy: false
+# Outputting
+permalink: /:categories/:title/
+#paginate: 4 # amount of posts to show
+#paginate_path: /page:num/
+timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+#various configs
+enable_copy_code_button: true
+atom_feed:
+  hide: true
+
+include:
+  - _pages
+  - _jobs
+  - _projects
+  - _qualifications
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+  - .vscode/
+  - .github/
+  - Portfolio.code-workspace
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+  #- jekyll-archives
+
+author:
+  name   : "Benjamin Ryan"
+  avatar : "/assets/images/corporate.png"
+  bio    : "Aviation professional turned IT Support."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://Diffracted84.github.io/portfolio"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ben-ryan-67b391100/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Diffracted84"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/zest.mainia"
+
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://www.github.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/"
+
+defaults:
+  #/assets/download
+  - scope:
+      path: "/assets/download"
+    values:
+      image: false
+  #/assets/images
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  # _projects
+  - scope:
+      path: "_projects/"
+      type: projects
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _scroller
+  - scope:
+      path: _scroller/"
+      type: scroller
+    values:
+      layout: single
+      show_date: true
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _jobs
+  - scope:
+      path: "_jobs"
+      type: jobs
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
+  # _qualifications
+  - scope:
+      path: "_qualifications"
+      type: qualifications
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
+  # _certificates
+  - scope:
+      path: "_certificates"
+      type: certificates
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      read_time: true
+      comments: false
+      related: true
+
+
+#category_archive:
+#  type: liquid
+#  path: /categories/
+#tag_archive:
+#  type: liquid
+#  path: /tags/
+
+collections:
+  jobs:
+    output: true
+  projects:
+    output: false
+  scroller:
+    output: true
+  rspspc:
+    output: true
+  qualifications:
+    output: false
+  university:
+    output: false
+  diplomas:
+    output: false
+  certificates:
+    output: true
+  credentials:
+    output: false

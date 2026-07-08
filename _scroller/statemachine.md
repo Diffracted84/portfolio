@@ -4,7 +4,7 @@ index: 0
 excerpt: Building the backbone of the game.
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
-last_modified_at: 2026-06-10T03:05+10:00
+last_modified_at: 2026-06-11T53:32+10:00
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
@@ -19,6 +19,12 @@ header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
+
+single_layout_gallery:
+  - image_path: /assets/images/projects/sidescroller/statemachine/DataQueue.png
+    alt: "Graphical example of a data queue"
+  - image_path: /assets/images/projects/sidescroller/statemachine/DataStack.png
+    alt: "Graphical example of a data stack"
 
 toc: true
 toc_label: Jump to Section
@@ -83,13 +89,8 @@ For those that don't know, a quick intro to a queue:
 A queue is a collection of ordered entities. Typcally an entity becomes an element of the queue by joining at the back of the queue. As elements are processed they drop out. A bit like a line of people waiting to enter a club.
 {: .notice--success}
 Now that is out of the way, a typical queue acts as a buffer for data that needs processing. It waits in line until its turn and then it leaves the queue.
-<figure>
-  <img src="{{ '/assets/images/projects/sidescroller/statemachine/DataQueue.png' | relative_url }}" alt="Data Queue">
-</figure>
 A stack is similar, but works on a *Last In - First Out* basis. A stack is more like a deck of cards. You pick the one on the top, but you also place a card in the topof the stack.
-<figure>
-  <img src="{{ '/assets/images/projects/sidescroller/statemachine/DataStack.png' | relative_url }}" alt="Data Queue">
-</figure>
+{% include gallery id="single_layout_gallery" caption="***Left:*** Data Queue. ***Right:*** Data Stack" %}
 This is useful for states as you usually wish to go to the state defined last, but to have a queue of states to return to. This is particularly handy for things like in-game menus.
 
 ### An Example from my Game
