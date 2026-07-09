@@ -1,19 +1,30 @@
 ---
 title: The State Machine
+layout: single
 index: 0
 excerpt: Building the backbone of the game.
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
-last_modified_at: 2026-06-11T53:32+10:00
+last_modified_at: 2026-07-09T13:09+10:00
+show_date: true
+
+read_time: true
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
 tags: [pygame, scroller]
 
-share: false
-related: false
-
+author_profile: true
 author: Casual
+
+toc: true
+toc_label: Jump to Section
+toc_icon: book
+toc_sticky: true
+
+comments: true
+share: false
+related: true
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
@@ -25,11 +36,6 @@ single_layout_gallery:
     alt: "Graphical example of a data queue"
   - image_path: /assets/images/projects/sidescroller/statemachine/DataStack.png
     alt: "Graphical example of a data stack"
-
-toc: true
-toc_label: Jump to Section
-toc_icon: book
-toc_sticky: true
 ---
 ## Overview
 I have been playing with making a game using the pygame framework for a few months now. It has been a learning curve, but I am starting to get the hang of it.
@@ -90,7 +96,7 @@ A queue is a collection of ordered entities. Typcally an entity becomes an eleme
 {: .notice--success}
 Now that is out of the way, a typical queue acts as a buffer for data that needs processing. It waits in line until its turn and then it leaves the queue.
 A stack is similar, but works on a *Last In - First Out* basis. A stack is more like a deck of cards. You pick the one on the top, but you also place a card in the topof the stack.
-{% include gallery id="single_layout_gallery" caption="***Left:*** Data Queue. ***Right:*** Data Stack" %}
+{% include gallery id="single_layout_gallery" caption="***Blue:*** Data Queue. ***Green:*** Data Stack" %}
 This is useful for states as you usually wish to go to the state defined last, but to have a queue of states to return to. This is particularly handy for things like in-game menus.
 
 ### An Example from my Game

@@ -44,6 +44,7 @@ include:
   - _jobs
   - _projects
   - _qualifications
+  - _scroller
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -116,7 +117,7 @@ defaults:
       path: "_projects/"
       type: projects
     values:
-      layout: single
+      layout: collection
       show_date: true
       author_profile: true
       read_time: true
@@ -127,14 +128,7 @@ defaults:
   - scope:
       path: _scroller/"
       type: scroller
-    values:
-      layout: single
-      show_date: true
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+    
   # _jobs
   - scope:
       path: "_jobs"
@@ -151,7 +145,7 @@ defaults:
       path: "_qualifications"
       type: qualifications
     values:
-      layout: single
+      layout: collection
       author_profile: false
       share: false
       read_time: false
@@ -184,6 +178,7 @@ collections:
     output: false
   scroller:
     output: true
+    permalink: /:collection/:path
   rspspc:
     output: true
   qualifications:
