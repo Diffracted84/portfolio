@@ -4,15 +4,15 @@ layout: single
 index: 1
 excerpt: Building a class for user interaction.
 permalink: /projects/scroller/button
-date: 2026-07-10
-last_modified_at: 2026-07-11T12:00+10:00
+date: 2026-07-15
+last_modified_at: 2026-07-15T12:00+10:00
 show_date: true
 
 read_time: true
 words_per_minute: 200
 
 categories: [Programming, Python, Game Dev]
-tags: [pygame, scroller]
+tags: [pygame, scroller, interface]
 
 author_profile: true
 author: Casual
@@ -31,7 +31,7 @@ header:
   caption: Image by [nafeti_art](https://pixabay.com/users/nafeti_art-5143689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8120993) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/buttons/teaser.jpg
 
-single_layout_gallery:
+single_layout_gallery_proc:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/noicon.png
     alt: "Procedural button with no icon."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticon.png
@@ -44,6 +44,10 @@ single_layout_gallery:
     alt: "Procedural button with icon on left of label single word with no wrapping."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticonhover.png
     alt: "Procedural button in hover state."
+
+single_layout_gallery_img:
+  - image_path: /assets/images/projects/sidescroller/buttons/image/imagebutton.png
+    alt: "Image based button"
 
 toc: true
 toc_label: Jump to Section
@@ -171,7 +175,7 @@ def _icon_corner(self, icon_rect: pg.Rect) -> tuple[int, int]:
 ```
 The wrap logic itself is deliberately simple rather than clever - it splits the label on the space closest to the middle of the string, or just cuts it in half if there's no space at all. It's not something I'd reach for anywhere text length is unpredictable, but it's enough for short button labels.
 
-{% include gallery id="single_layout_gallery" caption="Various layout configurations possible with ProceduralButton class." %}
+{% include gallery id="single_layout_gallery_proc" caption="Various layout configurations possible with ProceduralButton class." %}
 
 ### The Part Being Rebuilt
 Shapes are now drawn directly with pygame's own drawing functions instead of external masks - `pg.draw.rect` with a `border_radius` for rounded and pill buttons, `pg.draw.circle` for circular ones:
@@ -237,6 +241,9 @@ def _make_button_surfaces(self) -> None:
     bg: pg.Surface = self._make_background_surf()
     hbg: pg.Surface = bg
 ```
+
+{% include gallery id="single_layout_gallery_img" caption="***Example:*** Image based button." %}
+
 Everything else - the label rendering, the transparency handling, `change_colour`, `draw` - follows the same pattern as the procedural buttons, since it's all inherited from the same `Button` contract.
 
 ## Conclusion
