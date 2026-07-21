@@ -4,8 +4,8 @@ layout: single
 index: 1
 excerpt: Building a class for user interaction.
 permalink: /projects/scroller/button
-date: 2026-07-15
-last_modified_at: 2026-07-15T12:00+10:00
+date: 2026-07-21
+last_modified_at: 2026-07-21T14:55+10:00
 show_date: true
 
 read_time: true
@@ -31,23 +31,39 @@ header:
   caption: Image by [nafeti_art](https://pixabay.com/users/nafeti_art-5143689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8120993) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/buttons/teaser.jpg
 
-single_layout_gallery_proc:
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/noicon.png
-    alt: "Procedural button with no icon."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticon.png
-    alt: "Procedural button with icon on left of label."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/righticon.png
-    alt: "Procedural button with icon on right of label."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/iconmulti.png
-    alt: "Procedural button with icon on left of label and wrapping around multiple spaces."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/iconsingle.png
-    alt: "Procedural button with icon on left of label single word with no wrapping."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticonhover.png
+single_layout_galerry_proc_state:
+  - image_path: /
+    alt: "Procedural button in normal state."
+  - image_path: /
     alt: "Procedural button in hover state."
+
+single_layout_gallery_proc_shapes:
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/noicon.png
+    alt: "Procedural button with rectangular shape. No icon."
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticon.png
+    alt: "Procedural button with rounded corners. Icon on the left."
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticon.png
+    alt: "Procedural button with pill shape. Icon on the right."
+
+single_layout_gallery_proc_shading:
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/righticon.png
+    alt: "Procedural button with rounded shading."
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/iconmulti.png
+    alt: "Procedural button with edge highlight shading."
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/iconsingle.png
+    alt: "Procedural button with bevel shading."
+
+single_layout_galerry_proc_circle:
+  - image_path: /
+    alt: "Procedural button in circle shape. No icon."
+  - image_path: /
+    alt: "Procedural button in circle shape. With icon."
 
 single_layout_gallery_img:
   - image_path: /assets/images/projects/sidescroller/buttons/image/imagebutton.png
-    alt: "Image based button"
+    alt: "Image based button in normal state."
+  - image_path: /
+    alt: "Image based button in hover state."
 
 toc: true
 toc_label: Jump to Section
@@ -55,28 +71,21 @@ toc_icon: book
 toc_sticky: true
 ---
 ## Overview
-The latest task I have given myself still isn't directly involved with making a game. It is making user interface buttons. I want the user to be able to navigate a menu screen with ease using a mouse and maybe later by keyboard. In my opinion, buttons are a great way to allow this.
-
-## What Makes a Good Button
-Before writing any code I wanted to be clear on what I was actually building, because "draw a rectangle with some text on it" isn't really a button, it's a label that happens to sit still.
-
-Boiled down, I think a good button needs to do two things. First, it needs to look appealing and match the theme of the context it's in - in this case, a game, so it should feel like part of the game rather than a generic UI widget dropped on top of it. Second, and just as important, it needs to operate smoothly and predictably. However it's styled, hovering and clicking should behave the same way every time.
-
-That second point is really what shaped the class structure below - the visuals can vary as much as I like, as long as the underlying behaviour doesn't.
+The latest task I've given myself isn't directly building the game itself - it's the buttons that let a player navigate a menu with a mouse, and eventually a keyboard. A rectangle with some text on it isn't really a button, it's a label that happens to sit still. A button needs to look like it belongs in the game rather than a generic UI widget dropped on top of it, and it needs to behave predictably - hovering and clicking the same way every time regardless of how it's styled.
 
 ## The Parent Class
-Every button, however it ends up looking, needs to know the same three things: is the mouse over it, has it been clicked, and where does it draw itself. That's the job of the `Button` parent class - it doesn't know or care how its surfaces were made, only how to react once they exist.
+Every button, however it ends up looking, needs to know the same three things: is the mouse over it, has it been clicked, and where does it draw itself. That's the whole job of the `Button` parent class - it doesn't know or care how its surfaces were made, only how to react once they exist.
 
 ```python
 class Button():
     def __init__(self, centre: tuple[int, int]) -> None:
-        #button spatial information
         self.centre: tuple[int, int] = centre
         self.hover: bool = False
         self.clicked: bool = False
         self.action: bool = False
 ```
-Nothing fancy at init - just position and three state flags. The actual visuals get handed in afterwards by a child class, via a small dataclass:
+
+The visuals arrive afterwards as a small dataclass - background, hover background, label, hover label - and the parent just wires them up to a position:
 
 ```python
 @dataclass
@@ -86,99 +95,52 @@ class ButtonSurfaces:
     foreground: pg.Surface
     hover_fg: pg.Surface
 ```
-`ButtonSurfaces` is just a bundle of four pre-rendered surfaces - background, hover background, label, hover label. Whatever subclass I write later, its only job is to produce one of these and hand it to the parent:
+
+Whatever child class builds the button, its only job is to produce one of these and hand it over. Alongside `centre`, the parent also exposes `hoverstate` and `clickstate` as two read-only properties for menu code to check.
+
+## Hit Detection
+A `pg.Rect` is only ever a bounding box - useful, but a circular button still has a rectangular hitbox if that's all you use. It's the doorknob problem: the door frame around it is rectangular, but you don't expect to open the door by pressing the corner of the frame. So mouse collision uses pygame's mask module to build a pixel-accurate shape from the button's actual image, checked in two passes - broad, then fine:
 
 ```python
-def make_the_button(self, surfaces: ButtonSurfaces) -> None:
-    #button states
-    self.surfaces: ButtonSurfaces = surfaces
-
-    #background
-    self.image: pg.Surface = self.surfaces.background
-    self.rect: pg.Rect = self.surfaces.background.get_rect(center = self.centre)
-    
-    #button foreground
-    self.label: pg.Surface = self.surfaces.foreground
-    self.label_rect: pg.Rect = self.surfaces.foreground.get_rect(center = self.centre)
-
-    #make the collision mask
-    self._get_mask()
+if (rel_x in range(0, self.rect.width) and 
+    rel_y in range(0, self.rect.height)):
+    if self.surface_mask.get_at((rel_x, rel_y)):
+        self.hover = True
+        self.check_clicked()
 ```
 
-### Hit Detection
-A `pg.Rect` is only ever a bounding box - useful, but a circular button still has a rectangular hitbox if that's all you use. Think of it like a doorknob: the door frame around it is rectangular, but you don't expect to open the door by pressing the corner of the frame. So I use pygame's mask module to build a pixel-accurate collision shape from the button's actual image:
+The cheap rectangle check runs first, and the more expensive per-pixel mask check only runs if the mouse is already in the ballpark.
 
-```python
-def _get_mask(self) -> None:
-    #this should be the dame for all the ploymorphs - do it here.
-    self.surface_mask: pg.Mask = pg.mask.from_surface(self.image)
-```
-Checking the mouse position then happens in two passes - broad, then fine:
-
-```python
-def check_mouse_position(self, screenratio: tuple[int, int], position: tuple) -> None:
-    #was the mouse in the button when clicked?
-    scaled_pos: tuple[int, int] = cnv.scale_mouse_pos(screenratio, position)
-
-    #check if scaled mouse in rect first:
-    rel_x: int = scaled_pos[0] - self.rect.left
-    rel_y: int = scaled_pos[1] - self.rect.top
-
-    #check if in rect and then apply a mask collision detect
-    if (rel_x in range(0, self.rect.width) and 
-        rel_y in range(0, self.rect.height)):
-        #now apply mask and see if colliding
-        if self.surface_mask.get_at((rel_x, rel_y)):
-            self.hover = True
-            #check clicks
-            self.check_clicked()
-        else:
-            self.hover: bool = False
-    else:
-        self.hover: bool = False
-```
-First the mouse position is scaled to account for the game window not necessarily matching the native resolution. Then it's a cheap rectangle check - is the mouse even in the ballpark - before the more expensive per-pixel mask check runs. No point asking "which pixel is this?" if the mouse isn't near the button at all.
-
-### Click Debounce
-Reading `pg.mouse.get_pressed()` directly would fire the action every frame the button is held down, which isn't what a click means. I wanted one action per press, the same way a doorbell only rings once no matter how long you lean on it - you have to let go and press again.
+## Click Debounce
+One action per press is the goal, the same way a doorbell only rings once no matter how long you lean on it - you have to let go and press again. `self.clicked` tracks whether the button is currently held, and `self.action` only goes true on the single frame the mouse transitions from up to down:
 
 ```python
 def check_clicked(self) -> None:
     self.action = False
-    #check if the left mouse button has been clicked
     if pg.mouse.get_pressed()[0] == True and self.clicked == False:
         self.clicked = True
         self.action = True
     if pg.mouse.get_pressed()[0] == False:
         self.clicked = False
 ```
-`self.clicked` tracks whether the button is currently being held, and `self.action` only goes true on the single frame the mouse transitions from up to down. `hoverstate` and `clickstate` then just expose these two flags as read-only properties for the rest of the game to query.
 
-The remaining methods on the parent - `make_button_surfaces`, `change_colour`, `draw` - are empty on purpose. They're the contract each child class has to fulfil, since only the child knows how its own surfaces are built and coloured.
-
-## Procedural Buttons
-A procedural button draws its own background and label from scratch, rather than relying on artwork. That gives me full control over colour, hover state and layout without needing a designer or an image editor open at 11pm.
-
-This one is mid-refactor, so it's really the story of one class, not two. The current `ProceduralButton` handles icon placement and label wrapping well, but leans on external crop/overlay mask images for anything beyond a plain rectangle - which meant reaching for image editing software in an otherwise fully procedural pipeline just to get a rounded corner. So I've started rebuilding it as `NewProcButton`, which draws its own shapes and shading instead of using masks. Once it also has the icon and label logic ported over, `NewProcButton` becomes the new `ProceduralButton`.
-
-### What the Current Version Does Well
-Icons can sit to the left or right of the label, and the label wraps to a second line if it doesn't fit in the remaining space:
+## Configuration by Dataclass
+A button needs a lot of settings - colour, hover colour, icon path, padding, shape, shading, label - and passing all of that as separate constructor arguments gets unwieldy fast. So each group of related settings is its own small dataclass - `ButtonLayer` for a colour pair, `IconLayer` for icon placement, `Geometry` for shape and size - bundled into one `ProcButtonArgs` for the whole button:
 
 ```python
-def _icon_corner(self, icon_rect: pg.Rect) -> tuple[int, int]:
-    #return the left position of the icon surface for the button
-    if self.icon_position == icopos.LEFT:
-        icoleft: int = self.padding
-    elif self.icon_position == icopos.RIGHT:
-        icoleft: int = self.reference_rect.width - (icon_rect.width + (2 *self.padding))
-    ...
+@dataclass
+class ProcButtonArgs:
+    bg_settings: ButtonLayer
+    fg_settings: ButtonLayer
+    icon_settings: IconLayer
+    geometry_settings: Geometry
+    label: str
 ```
-The wrap logic itself is deliberately simple rather than clever - it splits the label on the space closest to the middle of the string, or just cuts it in half if there's no space at all. It's not something I'd reach for anywhere text length is unpredictable, but it's enough for short button labels.
 
-{% include gallery id="single_layout_gallery_proc" caption="Various layout configurations possible with ProceduralButton class." %}
+It's the difference between handing someone a shopping list item by item versus handing them a packed bag - same contents, but only one of those is easy to carry. `ImageButton` takes the same approach with `ImageBtnArgs`. Both button classes just unpack a settings object at the top of `__init__` rather than reading through a long parameter list.
 
-### The Part Being Rebuilt
-Shapes are now drawn directly with pygame's own drawing functions instead of external masks - `pg.draw.rect` with a `border_radius` for rounded and pill buttons, `pg.draw.circle` for circular ones:
+## Procedural Buttons
+`ProceduralButton` draws its own background and label from scratch rather than relying on artwork, using pygame's own drawing functions - `pg.draw.rect` with a `border_radius` for rounded and pill shapes, `pg.draw.circle` for circular ones:
 
 ```python
 class btnShape(Enum):
@@ -187,68 +149,41 @@ class btnShape(Enum):
     PILL = 2
     CIRCLE = 3
 ```
-Shading is the more interesting addition. I use numpy to build a brightness profile - a single vertical strip of values, brightest just above centre, fading towards both edges - and tile it sideways across the whole button:
+
+Shading builds on top of the shape. It works by constructing a brightness profile - a single vertical strip of values - and tiling it across the button. The round variant peaks just above centre for a soft highlight, the edge-highlight variant uses a flatter, harder-edged profile, and the bevel variant brightens the top few pixels and darkens the bottom few to fake a raised edge:
 
 ```python
 def _shading_round(self, surface: pg.Surface) -> pg.Surface:
     pixels = pg.surfarray.pixels3d(surface)
-
-    #curved sine-wave profile over the button's height, peak slightly above centre
     y_indices = np.arange(self.size[1])
     normalised = y_indices / (self.size[1] - 1)
+
     curve = np.sin(normalised * np.pi + 0.3)
-    profile = (110 + curve * 145).astype(np.uint8)
+    profile = (205 + curve * 50).astype(np.uint8)
 
     return self._apply_shading(pixels, profile, surface)
 ```
-An edge-highlight variant works the same way with a flatter profile, giving a harder, more plastic-looking highlight rather than a soft gradient.
 
-`NewProcButton` doesn't yet have the icon placement or wrapping that the current `ProceduralButton` has, and a planned bevel shading option is still an empty `pass`. Once those are carried across, this becomes the one procedural button class rather than two.
+None of these are physically accurate lighting - they're a cheap approximation that reads as "raised" or "glossy" at a glance, which is all a menu button needs.
+
+Icons can sit to the left, right, or centre of the label, and the label wraps to a second line if it doesn't fit in the remaining space. The wrap logic is deliberately simple - it splits the label on the space closest to the middle of the string, or cuts it in half if there's no space at all. It's not something I'd reach for anywhere text length is unpredictable, but it's enough for short button labels.
+
+## Circles Are a Special Case
+A circular button was never going to fit a full word, so it doesn't try. If it has an icon, the icon sits dead centre and the label is dropped entirely. If it doesn't, the label is cut down to its first letter, capitalised. Rather than wrapping text into an unreadable stack to force it into a shape that isn't built for text, the button just gives up on the label gracefully.
 
 ## Image Based Buttons
-Sometimes a button just needs to be a piece of artwork rather than something drawn from primitives - a hand-designed icon button, for instance, where procedural shading would never match. `ImageButton` covers that case by loading an image file straight in as the background:
+Sometimes a button needs to be a piece of artwork rather than something drawn from primitives - a hand-designed icon, for instance, where procedural shading would never match. `ImageButton` covers that case by loading an image file straight in as the background, centred onto a reference surface filled with a colour key so any part not covered by the artwork stays transparent.
+
+Hover state gets its own artwork too, rather than reusing the normal-state image with just the label colour changing:
 
 ```python
-class ImageButton(Button):
-    def __init__(self, font: pg.Font, image_path: str, text_primary_colour: int,
-            text_hover_colour: int, position: tuple[int, int], size: tuple[int, int], 
-            text:str, mask_colour: int) -> None:
-        super(ImageButton, self).__init__(position)
-```
-Rather than drawing straight onto a blank surface, it first fills a reference surface with a colour key, then blits the loaded image centred on top:
-
-```python
-def _make_background_surf(self) -> pg.Surface:
-    #make the injected image a surface and centre it on the reference surface
-    image:pg.Surface = pg.image.load(self.path).convert_alpha()
-    im_rect: pg.Rect = image.get_rect()
-
-    #centre onto reference
-    im_rect.center = self.ref_rect.center
-
-    #blit onto reference surface
-    self.reference.blit(image, im_rect)
-
-    return self.reference
-```
-The colour key (`mask_colour`) means any part of the reference surface not covered by the image stays transparent, which matters when the source artwork doesn't fill the whole button area.
-
-One deliberate simplification here: `ImageButton` doesn't have a separate hover background at all - `hover_bg` is just set to the same surface as `background`. The artwork already carries enough visual weight on its own, so only the label colour changes between states:
-
-```python
-def _make_button_surfaces(self) -> None:
-    #make the background surfaces - normal = hover
-    bg: pg.Surface = self._make_background_surf()
-    hbg: pg.Surface = bg
+bg: pg.Surface = self._make_background_surf(self.bg['primary'])
+hbg: pg.Surface = self._make_background_surf(self.bg['hover'])
 ```
 
-{% include gallery id="single_layout_gallery_img" caption="***Example:*** Image based button." %}
-
-Everything else - the label rendering, the transparency handling, `change_colour`, `draw` - follows the same pattern as the procedural buttons, since it's all inherited from the same `Button` contract.
+`ImageBtnArgs` takes a separate `hover_path` for this. A caller that doesn't want a distinct hover look can still pass the same path twice, but that's a choice being made rather than a limitation baked into the class.
 
 ## Conclusion
-Three different ways to build a button's face - drawn procedurally, drawn and shaded procedurally, or lifted from artwork - but all three sit on the same `Button` skeleton underneath, which only cares about position, hover state, click state and drawing. That split has turned out to be the useful part: I can change how a button looks completely without touching how it behaves.
-
-There's still tidying up to do. The icon and label logic needs to make its way from `ProceduralButton` into `NewProcButton` so it can properly take over, and keyboard navigation is still just an idea rather than code. But for mouse-driven menus, this is enough to start building screens on top of.
+Three ways to build a button's face - drawn procedurally, drawn and shaded procedurally, or lifted from artwork - all sitting on the same `Button` skeleton underneath, which only cares about position, hover state, click state, and drawing. That split is the useful part: how a button looks can change completely without touching how it behaves. Keyboard navigation is still just an idea rather than code, but for mouse-driven menus, this is enough to start building screens on top of.
 
 ## Attributions
