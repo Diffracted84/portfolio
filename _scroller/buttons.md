@@ -31,10 +31,10 @@ header:
   caption: Image by [nafeti_art](https://pixabay.com/users/nafeti_art-5143689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8120993) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/buttons/teaser.jpg
 
-single_layout_galerry_proc_state:
-  - image_path: /
+single_layout_gallery_proc_state:
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_norm.png
     alt: "Procedural button in normal state."
-  - image_path: /
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_hover.png
     alt: "Procedural button in hover state."
 
 single_layout_gallery_proc_shapes:
@@ -97,6 +97,8 @@ class ButtonSurfaces:
 ```
 
 Whatever child class builds the button, its only job is to produce one of these and hand it over. Alongside `centre`, the parent also exposes `hoverstate` and `clickstate` as two read-only properties for menu code to check.
+
+{% include gallery id="single_layout_gallery_proc_state" caption="***Left:*** Normal. ***Right:*** Hover" %}
 
 ## Hit Detection
 A `pg.Rect` is only ever a bounding box - useful, but a circular button still has a rectangular hitbox if that's all you use. It's the doorknob problem: the door frame around it is rectangular, but you don't expect to open the door by pressing the corner of the frame. So mouse collision uses pygame's mask module to build a pixel-accurate shape from the button's actual image, checked in two passes - broad, then fine:
