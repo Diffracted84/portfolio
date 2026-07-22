@@ -4,8 +4,8 @@ layout: single
 index: 1
 excerpt: Building a class for user interaction.
 permalink: /projects/scroller/button
-date: 2026-07-21
-last_modified_at: 2026-07-21T14:55+10:00
+date: 2026-07-23
+last_modified_at: 2026-07-23T15:00+10:00
 show_date: true
 
 read_time: true
@@ -31,21 +31,21 @@ header:
   caption: Image by [nafeti_art](https://pixabay.com/users/nafeti_art-5143689/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8120993) from [Pixabay](https://pixabay.com)
   teaser: /assets/images/projects/sidescroller/buttons/teaser.png
 
-single_layout_gallery_proc_state:
+gallery_proc_state:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_norm.png
     alt: "Procedural button in normal state."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_hover.png
     alt: "Procedural button in hover state."
 
-single_layout_gallery_proc_shapes:
+gallery_proc_shapes:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_norm.png
     alt: "Procedural button with rectangular shape."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_rect_noshade_noico_norm.png
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_noshade_noico_norm.png
     alt: "Procedural button with rounded corners."
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/lefticon.png
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_pill_noshade_noico_norm.png
     alt: "Procedural button with pill shape."
 
-single_layout_gallery_proc_shading:
+gallery_proc_shading:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_round_lhico_norm.png
     alt: "Procedural button with rounded shading."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_edge_lhico_norm.png
@@ -53,19 +53,19 @@ single_layout_gallery_proc_shading:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_bevel_lhico_norm.png
     alt: "Procedural button with bevel shading."
 
-single_layout_gallery_proc_icon:
-  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_pill_noshade_lhico_norm.png
-    alt: "Pill button with icon on the left."
+gallery_proc_icon:
+  - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_noshade_lhico_norm.png
+    alt: "Round corner button with icon on the left."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_round_noshade_rhico_norm.png
     alt: "Round corner button with icon on the right."
 
-single_layout_gallery_proc_circle:
+gallery_proc_circ:
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_circ_noshade_noico_norm.png
     alt: "Procedural button in circle shape. No icon."
   - image_path: /assets/images/projects/sidescroller/buttons/procedural/procbtn_circ_noshade_centico_norm.png
     alt: "Procedural button in circle shape. With icon."
 
-single_layout_gallery_img:
+gallery_img:
   - image_path: /assets/images/projects/sidescroller/buttons/image/imgbtn_norm.png
     alt: "Image based button in normal state."
   - image_path: /assets/images/projects/sidescroller/buttons/image/imgbtn_hover.png
@@ -104,7 +104,7 @@ class ButtonSurfaces:
 
 Whatever child class builds the button, its only job is to produce one of these and hand it over. Alongside `centre`, the parent also exposes `hoverstate` and `clickstate` as two read-only properties for menu code to check.
 
-{% include gallery id="single_layout_gallery_proc_state" caption="***Yellow:*** Normal State. ***Olive:*** Hover State" %}
+{% include gallery id="gallery_proc_state" caption="***Yellow:*** Normal State. ***Olive:*** Hover State" %}
 
 ## Hit Detection
 A `pg.Rect` is only ever a bounding box - useful, but a circular button still has a rectangular hitbox if that's all you use. It's the doorknob problem: the door frame around it is rectangular, but you don't expect to open the door by pressing the corner of the frame. So mouse collision uses pygame's mask module to build a pixel-accurate shape from the button's actual image, checked in two passes - broad, then fine:
@@ -159,7 +159,7 @@ class btnShape(Enum):
     CIRCLE = 3
 ```
 
-{% include gallery id="single_layout_gallery_proc_shapes" caption="Examples of procedural button geometery." %}
+{% include gallery id="gallery_proc_shapes" caption="Examples of procedural button geometery." %}
 
 ### Shading
 Shading builds on top of the shape. It works by constructing a brightness profile - a single vertical strip of values - and tiling it across the button. The round variant peaks just above centre for a soft highlight, the edge-highlight variant uses a flatter, harder-edged profile, and the bevel variant brightens the top few pixels and darkens the bottom few to fake a raised edge:
@@ -176,7 +176,7 @@ def _shading_round(self, surface: pg.Surface) -> pg.Surface:
     return self._apply_shading(pixels, profile, surface)
 ```
 
-{% include gallery id="single_layout_gallery_proc_shading" caption="Examples of faux shading"}
+{% include gallery id="gallery_proc_shading" caption="Examples of faux shading." %}
 
 None of these are physically accurate lighting - they're a cheap approximation that reads as "raised" or "glossy" at a glance, which is all a menu button needs.
 
@@ -185,14 +185,14 @@ Icons can sit to the left, right, or centre of the label, and the label wraps to
 ### Icon Placement
 An icon isn't bolted onto a finished button - it claims space from the label before anything gets drawn. `IconLayer` fixes a position (`LEFT`, `RIGHT`, `CENTRE`, or `NONE`) and a padding value, and the corner-placement logic only runs when that position isn't `NONE` (since a button with no icon has nothing to place).
 
-{% include gallery id=single_layout_gallery_proc_icon" caption="Examples of icon placement." %}
+{% include gallery id="gallery_proc_icon" caption="Examples of icon placement." %}
 
 Left and right placement pushes the icon to its edge of the reference rect with padding as the gap, and the label's available width shrinks to match - which is what feeds the wrap logic above. A wide icon on a narrow button means the label wraps sooner, not that it gets clipped.
 
 ### Circles Are a Special Case
 A circular button was never going to fit a full word, so it doesn't try. If it has an icon, the icon sits dead centre and the label is dropped entirely. If it doesn't, the label is cut down to its first letter, capitalised. Rather than wrapping text into an unreadable stack to force it into a shape that isn't built for text, the button just gives up on the label gracefully.
 
-{% include gallery id=single_layout_gallery_proc_circ" caption="Circle buttons with and without icons." %}
+{% include gallery id="gallery_proc_circ" caption="Circle buttons with and without icons." %}
 
 ## Image Based Buttons
 Sometimes a button needs to be a piece of artwork rather than something drawn from primitives - a hand-designed icon, for instance, where procedural shading would never match. `ImageButton` covers that case by loading an image file straight in as the background, centred onto a reference surface filled with a colour key so any part not covered by the artwork stays transparent.
@@ -204,7 +204,7 @@ bg: pg.Surface = self._make_background_surf(self.bg['primary'])
 hbg: pg.Surface = self._make_background_surf(self.bg['hover'])
 ```
 
-{% include gallery id="single_layout_gallery_img" caption="***Blue:*** Normal state Image based button. ***Green:*** The same button in hover state." %}
+{% include gallery id="gallery_img" caption="***Blue:*** Normal state Image based button. ***Green:*** The same button in hover state." %}
 
 `ImageBtnArgs` takes a separate `hover_path` for this. A caller that doesn't want a distinct hover look can still pass the same path twice, but that's a choice being made rather than a limitation baked into the class.
 
@@ -212,3 +212,6 @@ hbg: pg.Surface = self._make_background_surf(self.bg['hover'])
 Three ways to build a button's face - drawn procedurally, drawn and shaded procedurally, or lifted from artwork - all sitting on the same `Button` skeleton underneath, which only cares about position, hover state, click state, and drawing. That split is the useful part: how a button looks can change completely without touching how it behaves. Keyboard navigation is still just an idea rather than code, but for mouse-driven menus, this is enough to start building screens on top of.
 
 ## Attributions
+I gained inspiration from these two sources:
+1. [EASY Way to Make BUTTONS for Python/PyGame Projects](https://www.youtube.com/watch?v=al_V4OGSvFU&t=290s) by [baraltech](https://www.youtube.com/@baraltech)
+2. [PyGame Beginner Tutorial in Python - Adding Buttons](https://www.youtube.com/watch?v=G8MYGDf_9ho&t=902s) by [Coding With Russ](https://www.youtube.com/@CodingWithRuss)

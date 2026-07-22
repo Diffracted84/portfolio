@@ -2,7 +2,7 @@
 title: Moodle Admin Basics
 index: 0
 excerpt: Awarded for successfully completing the Moodle Academy Moodle Admin Basics program.
-permalink: /qualifications/certificates/moodle-basic-admin
+permalink: /qualifications/certificates/moodle-basic-admin/
 
 share: false
 related: false
@@ -12,9 +12,9 @@ author: Professional
 classes: wide
 
 #header:
-  image: /assets/images/projects/sidescroller/statemachine/header.png
-  caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311)
-  teaser: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
+#  image: /assets/images/projects/sidescroller/statemachine/header.png
+#  caption: Image by Lucas Israel from [Pixabay](https://pixabay.com/)
+#  teaser: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
 ---
 ![image-right]({{ "/assets/images/qualifications/certifications/Moodle_Admin_Basics.png" | relative_url}}){: .align-right}
 ### Particulars ###
