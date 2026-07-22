@@ -5,7 +5,7 @@ index: 0
 excerpt: Building the backbone of the game.
 permalink: /projects/scroller/statemachine
 date: 2026-05-26
-last_modified_at: 2026-07-09T13:09+10:00
+last_modified_at: 2026-07-22T16:47+10:00
 show_date: true
 
 read_time: true
@@ -29,7 +29,7 @@ related: true
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png
   caption: Image by [Lucas Israel](https://pixabay.com/users/lucasjisrael-43158173/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8860311) from [Pixabay](https://pixabay.com)
-  teaser: /assets/images/projects/sidescroller/statemachine/StateDiag.png
+  teaser: /assets/images/projects/sidescroller/statemachine/teaser.png
 
 single_layout_gallery:
   - image_path: /assets/images/projects/sidescroller/statemachine/DataQueue.png
