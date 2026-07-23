@@ -157,9 +157,9 @@ defaults:
       type: certificates
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       share: false
-      read_time: true
+      read_time: false
       comments: false
       related: true
 
