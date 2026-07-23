@@ -12,7 +12,11 @@ author: Casual
 
 header:
   image: /assets/images/projects/sidescroller/header.png
+<<<<<<< HEAD
   #teaser: /assets/images/projects/sidescroller/teaser.png
+=======
+  teaser: /assets/images/projects/sidescroller/teaser.png
+>>>>>>> refs/remotes/origin/main
 ---
 I have started making a simple game in ***Python*** to learn some new development skills.
 
