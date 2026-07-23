@@ -11,12 +11,16 @@ author: Professional
 
 classes: wide
 
-#header:
-#  image: /assets/images/projects/sidescroller/statemachine/header.png
-#  caption: Image by Lucas Israel from [Pixabay](https://pixabay.com/)
-#  teaser: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
+header:
+  image: /assets/images/qualifications/certifications/header.png
+  teaser: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
+
+gallery_cert:
+  - image_path: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
+    alt: Moodle Admin Basics badge
+#[!image-left]({% include gallery id="gallery_cert" %})
 ---
-![image-right]({{ "/assets/images/qualifications/certifications/Moodle_Admin_Basics.png" | relative_url}}){: .align-right}
+
 ### Particulars ###
 **Issued:**
 3rd February 2026
