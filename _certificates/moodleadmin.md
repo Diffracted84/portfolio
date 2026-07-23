@@ -7,21 +7,26 @@ permalink: /qualifications/certificates/moodle-basic-admin/
 share: false
 related: false
 
-author: Professional
+#author: Professional
 
-classes: wide
+sidebar:
+  - image: /assets/images/qualifications/certifications/moodle/adminbasics.png
+    image_alt: Moodle Admin Basics Badge
+  
+  - title: Type
+    text: Certification
+
+#classes: wide
 
 header:
   image: /assets/images/qualifications/certifications/header.png
   teaser: /assets/images/qualifications/certifications/moodle/adminbasics.png
 ---
-## Particulars ##
-{% include figure image_path"/assets/images/qualifications/certifications/moodle/adminbasics.png"
-  alt="Moodle Admin Basics Badge"
-  class="align-left" %}
-### Issued: ###
+### Particulars ###
+![Moodle Admin Badge]({{ '/assets/images/qualifications/certifications/moodle/adminbasics.png' | relative_url }}){: .align-right}
+## Issued: ##
 3rd February 2026
-### Issued By: ###
+# Issued By: #
 Moodle Academy
 ### Course: ###
 Moodle Admin Basics program and certificate.
