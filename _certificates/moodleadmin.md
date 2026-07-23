@@ -13,31 +13,22 @@ classes: wide
 
 header:
   image: /assets/images/qualifications/certifications/header.png
-  teaser: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
-
-gallery_cert:
-  - image_path: /assets/images/qualifications/certifications/Moodle_Admin_Basics.png
-    alt: Moodle Admin Basics badge
-#[!image-left]({% include gallery id="gallery_cert" %})
+  teaser: /assets/images/qualifications/certifications/moodle/adminbasics.png
 ---
-
-### Particulars ###
-**Issued:**
+## Particulars ##
+{% include figure image_path"/assets/images/qualifications/certifications/moodle/adminbasics.png"
+  alt="Moodle Admin Basics Badge"
+  class="align-left" %}
+### Issued: ###
 3rd February 2026
-
-
-**Issued By:**
+### Issued By: ###
 Moodle Academy
-
-
-**Course:**
+### Course: ###
 Moodle Admin Basics program and certificate.
-
-
-**Awarded For:**
+### Awarded For: ###
 Successfully completing the Moodle Academy Moodle Admin Basics program.
-
-### Criteria: ###
+{: style="clear: left;"}
+## Criteria: ##
 Complete ALL of the listed requirements.
 - Users must complete the course "Moodle Admin Basics program and certificate" with minimum grade of 80.
 - ALL of the following activities are completed:

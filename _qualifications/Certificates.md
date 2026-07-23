@@ -11,7 +11,7 @@ author_profile: true
 
 classes: wide
 show_excerpts: true
-entries_layout: list
+entries_layout: grid
 sort_by: index
 sort_order: forward
 
