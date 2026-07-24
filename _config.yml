@@ -15,11 +15,14 @@
 # in the templates via {{ site.myvariable }}.
 title: Portfolio for Ben Ryan
 email: benryan.aviationtraining@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Portfolio for Ben Ryan.
 github_username: Diffracted84
 minimal_mistakes_skin: default
 search: false
+
+url: "https://Diffracted84.github.io"
+baseurl: "/portfolio"
 
 # Build settings
 markdown: kramdown
@@ -31,11 +34,17 @@ permalink: /:categories/:title/
 #paginate_path: /page:num/
 timezone: Australia/Sydney # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+#various configs
+enable_copy_code_button: true
+atom_feed:
+  hide: true
+
 include:
   - _pages
   - _jobs
   - _projects
-  #- _qualifications
+  - _qualifications
+  - _scroller
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -108,7 +117,7 @@ defaults:
       path: "_projects/"
       type: projects
     values:
-      layout: single
+      layout: collection
       show_date: true
       author_profile: true
       read_time: true
@@ -117,28 +126,9 @@ defaults:
       related: true
   # _scroller
   - scope:
-      path: ""
+      path: _scroller/"
       type: scroller
-    values:
-      layout: single
-      show_date: true
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # rspspc
-  - scope:
-      path: ""
-      type: rspspc
-    values:
-      layout: single
-      show_date: true
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+    
   # _jobs
   - scope:
       path: "_jobs"
@@ -153,15 +143,26 @@ defaults:
   # _qualifications
   - scope:
       path: "_qualifications"
-      type: single
-      #collection: jobs
+      type: qualifications
+    values:
+      layout: collection
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
+  # _certificates
+  - scope:
+      path: "_certificates"
+      type: certificates
     values:
       layout: single
       author_profile: false
       share: false
       read_time: false
       comments: false
-      related: false
+      related: true
+
 
 #category_archive:
 #  type: liquid
@@ -177,15 +178,16 @@ collections:
     output: false
   scroller:
     output: true
+    permalink: /:collection/:path
   rspspc:
     output: true
-  quals:
+  qualifications:
     output: false
   university:
     output: false
   diplomas:
     output: false
   certificates:
-    output: false
+    output: true
   credentials:
     output: false

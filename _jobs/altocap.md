@@ -1,11 +1,13 @@
 ---
-order_number: 3
 title: "Altocap Flight School"
+index: 3
 excerpt: "Camden, Oct 2016 - Jan 2022"
 permalink: /about/Altocap
+
 header:
   image: /assets/images/jobs/altocap/altocap-header.jpg
   teaser: /assets/images/jobs/altocap/altocap-teaser.jpg
+
 sidebar:
   - image: /assets/images/jobs/altocap/altocap.png
     image_alt: "Altocap Logo"

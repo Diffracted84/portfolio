@@ -19,7 +19,36 @@ intro:
   - excerpt: "Please select from the following:"
 
 feature_row:
-<<<<<<< HEAD
+  - image_path: /assets/images/splash/splash-about.png
+    alt: "Image of a man working at a desk."
+    title: "About"
+    excerpt: "My work history is just a click away."
+    url: /about/
+    btn_label: "Find Out More"
+    btn_class: "btn--danger"
+  - image_path: /assets/images/splash/splash-project.png
+    alt: "Image of man planting a tree."
+    title: "Projects"
+    excerpt: "Look at my side projects."
+    url: /projects/
+    btn_label: "Read More"
+    btn_class: "btn--success"
+  - image_path: /assets/images/splash/splash-qualification.png
+    alt: "Image of man graduating university."
+    title: "Qualifications"
+    excerpt: "Coming Soon" #"Dive into my education and qualifications."
+  #  url: /qualifications/
+  #  btn_label: "Investigate"
+  #  btn_class: "btn--warning"
+  #- image_path: /assets/images/splash/splash-aviation.png
+  #  alt: "Image of a pilot with a plane flying overhead."
+  #  title: "Aviation"
+  #  excerpt: "An overview of my aviation record."
+  #  url: /aviation/
+  #  btn_label: "Check It Out"
+  #  btn_class: "btn--info"
+---
+    {% include feature_row id="intro" type="center" %}
   - image_path: /assets/images/splash/splash-about.jpg
     alt: "Image of a lego person at a desk."
     title: "About"
@@ -45,46 +74,13 @@ feature_row:
   #  btn_label: "Investigate"
   #  btn_class: "btn--inverse"
   #- image_path: /assets/images/splash/splash-aviation.jpg
-=======
-  - image_path: /assets/images/splash/splash-about.png
-    alt: "Image of a man working at a desk."
-    title: "About"
-    #caption: Image by [kirill_makes_pics](https://pixabay.com/users/kirill_makes_pics-5203613/) from [Pixabay](https://pixabay.com/)
-    excerpt: "My work history is just a click away."
-    url: /about/
-    btn_label: "Find Out More"
-    btn_class: "btn--danger"
-  - image_path: /assets/images/splash/splash-project.png
-    alt: "Image of man planting a tree."
-    title: "Projects"
-    #caption: Image by [kirill_makes_pics](https://pixabay.com/users/kirill_makes_pics-5203613/) from [Pixabay](https://pixabay.com/)
-    excerpt: "Look at my side projects."
-    url: /projects/
-    btn_label: "Read More"
-    btn_class: "btn--success"
-  - image_path: /assets/images/splash/splash-qualification.png
-    alt: "Image of man graduating university."
-    title: "Qualifications"
-    #caption: Image by [facebook827](https://pixabay.com/users/facebook827-3332528/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4924237) from [Pixabay](https://pixabay.com/)
-    excerpt: "Coming Soon" #"Dive into my education and qualifications."
-  #  url: /qualifications/
-  #  btn_label: "Investigate"
-  #  btn_class: "btn--warning"
-  #- image_path: /assets/images/splash/splash-aviation.png
->>>>>>> refs/remotes/origin/main
   #  alt: "Image of a lego person sitting on a book."
   #  caption: Image by [Robert](https://pixabay.com/users/s2dent-208425/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342) from [Pixabay](<a href=")https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=309342)
   #  title: "Aviation"
   #  excerpt: "An overview of my aviation record."
-<<<<<<< HEAD
   #  url: /aviation
   #  btn_label: "Check It Out"
   #  btn_class: "btn--inverse"
-=======
-  #  url: /aviation/
-  #  btn_label: "Check It Out"
-  #  btn_class: "btn--info"
->>>>>>> refs/remotes/origin/main
 ---
     {% include feature_row id="intro" type="center" %}
     {% include feature_row %}

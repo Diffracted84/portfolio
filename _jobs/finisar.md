@@ -1,11 +1,13 @@
 ---
-order_number: 5
 title: "Finisar"
+index: 5
 excerpt: "Sydney, Jan 2007 - Jul 2015"
 permalink: /about/Finisar
+
 header:
   image: /assets/images/jobs/finisar/finisar-header.png
   teaser: /assets/images/jobs/finisar/finisar-teaser.jpg
+
 sidebar:
   - image: /assets/images/jobs/finisar/finisar.jpg
     image_alt: "Finisar Logo"

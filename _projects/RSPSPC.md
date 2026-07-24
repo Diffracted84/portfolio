@@ -1,6 +1,6 @@
 ---
 title: RSPS P&C Website
-index: 1
+index: 2
 excerpt: "My volunteer work maintain a website."
 layout: single
 permalink: /projects/rspspc

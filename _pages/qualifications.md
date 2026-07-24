@@ -1,14 +1,21 @@
 ---
 title: My Qualifications
-layout: single #collection
+layout: collection
 permalink: /qualifications/
-#collection: credentials
-entries_layout: grid
+collection: qualifications
+
+author: Professional
 author_profile: true
+
+classes: wide
+show_excerpts: false
+entries_layout: list
+sort_by: index
+sort_order: forward
+
+header:
+  #overlay_filter: rgba(0,0,0,0.07)
+  overlay_image: /assets/images/qualifications/header.jpg
+  alt: Abstract pattern background image
+  caption: Image by [edith lüthi](https://pixabay.com/users/eluela31-4894494/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2681039) from [Pixabay](https://pixabay.com)
 ---
-### Work in Progress
-Please check back again soon for exciting developments.
-<figure>
-  <img src="{{ '/assets/images/wip.jpg' | relative_url }}" alt="Work in Progress">
-</figure>
-*Attribute:* Image by Elias from [Pixabay]("https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1914029")

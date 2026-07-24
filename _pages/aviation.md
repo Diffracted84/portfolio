@@ -1,12 +1,17 @@
 ---  
 title: "Aviation"
-layout: collection
+layout: single
 permalink: /aviation/
-collection: aviation
-author_profile: true
-show_excerpts: true
+#collection: aviation
 
 author: Pilot
+author_profile: true
+
+classes: wide
+show_excerpts: true
+entries_layout: grid
+sort_by: index
+sort_order: forward
 
 header:
   overlay_color: "#ff0000"

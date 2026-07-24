@@ -1,11 +1,13 @@
 ---
-order_number: 4
 title: "Phoenix Aero Club"
+index: 4
 excerpt: "Camden, Mar 2016 - Oct 2016"
 permalink: /about/PAC
+
 header:
   image: /assets/images/jobs/pac/pac-header.jpg
   teaser: /assets/images/jobs/pac/pac-teaser.jpg
+
 sidebar:
   - image: /assets/images/jobs/pac/pac.jpg
     image_alt: "PAC Logo"

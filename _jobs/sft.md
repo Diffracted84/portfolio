@@ -1,11 +1,13 @@
 ---
-order_number: 2
 title: "Sydney Flight Training"
+index: 2
 excerpt: "Bankstown, Feb 2022 - Jul 2023"
 permalink: /about/SFT
+
 header:
   image: /assets/images/jobs/sft/sft-header.jpg
   teaser: /assets/images/jobs/sft/sft-teaser.jpg
+
 sidebar:
   - image: /assets/images/jobs/sft/sft.jpg
     image_alt: "SFT Logo"
