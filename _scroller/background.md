@@ -5,7 +5,7 @@ index: 2
 excerpt: Layering the world behind the player.
 permalink: /projects/scroller/background/
 date: 2026-08-06
-last_modified_at: 2026-08-06T12:46+10:00
+last_modified_at: 2026-08-06T19:49+10:00
 show_date: true
 
 read_time: true
@@ -59,7 +59,7 @@ A background image is finite, but the scroll isn't, so each layer draws itself s
 self.x_pos = int(-1 * (-self.precise_xpos % self.rect.width))
 ```
 **Info:**
-You would think that a negative multipled by a negative number would make a position, so "why not just leave it positive?". I thought that too, but it turns out that in python the modulus operator does care. Not having the first negative number ensures that the background scrolls from right to left.
+You would think that a negative multipled by a negative number would make a positive, so "why not just leave it positive?". I thought that too, but it turns out that in python the modulus operator does care. Having the first negative number ensures that the background scrolls from right to left.
 {: .notice--info}
 
 Think of a scroller background like a conveyor belt loop rather than a single long banner - once a tile scrolls fully off one side, the modulo just hands the same tile back in from the end. Coupled with a seamless image and the join never shows.
