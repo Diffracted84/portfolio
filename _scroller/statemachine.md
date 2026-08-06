@@ -3,7 +3,7 @@ title: The State Machine
 layout: single
 index: 0
 excerpt: Building the backbone of the game.
-permalink: /projects/scroller/statemachine
+permalink: /projects/scroller/statemachine/
 date: 2026-05-26
 last_modified_at: 2026-07-22T16:47+10:00
 show_date: true
@@ -24,7 +24,7 @@ toc_sticky: true
 
 comments: true
 share: false
-related: true
+related: false
 
 header:
   image: /assets/images/projects/sidescroller/statemachine/header.png

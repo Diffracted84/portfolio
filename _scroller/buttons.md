@@ -3,7 +3,7 @@ title: Buttons
 layout: single
 index: 1
 excerpt: Building a class for user interaction.
-permalink: /projects/scroller/button
+permalink: /projects/scroller/button/
 date: 2026-07-23
 last_modified_at: 2026-07-23T16:20+10:00
 show_date: true
@@ -24,7 +24,7 @@ toc_sticky: true
 
 comments: true
 share: false
-related: true
+related: false
 
 header:
   image: /assets/images/projects/sidescroller/buttons/header.jpg

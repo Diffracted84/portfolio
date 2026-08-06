@@ -16,6 +16,7 @@ sort_by: index
 sort_order: forward
 
 header:
-  image: /assets/images/projects/sidescroller/header.png
-  teaser: /assets/images/projects/sidescroller/teaser.png
+  image: /assets/images/qualifications/certifications/header.png
+  caption: Image by [David](https://pixabay.com/users/davidrockdesign-2595351/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1430108) from [Pixabay](https://pixabay.com)
+  teaser: /assets/images/qualifications/certifications/header.png
 ---

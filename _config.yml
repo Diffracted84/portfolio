@@ -45,6 +45,7 @@ include:
   - _projects
   - _qualifications
   - _scroller
+  - _certificates
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -63,13 +64,13 @@ exclude:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+#  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  #- jekyll-archives
+#  - jekyll-archives
 
 author:
   name   : "Benjamin Ryan"
@@ -104,34 +105,41 @@ footer:
 defaults:
   #/assets/download
   - scope:
-      path: "/assets/download"
+      path: /assets/download
     values:
       image: false
   #/assets/images
   - scope:
-      path: "assets/images"
+      path: assets/images
     values:
       image: true
   # _projects
   - scope:
-      path: "_projects/"
+      path: _projects/
       type: projects
     values:
       layout: collection
       show_date: true
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
-      share: true
-      related: true
+      share: false
+      related: false
   # _scroller
   - scope:
-      path: _scroller/"
+      path: _scroller/
       type: scroller
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      read_time: true
+      comments: true
+      related: false
     
   # _jobs
   - scope:
-      path: "_jobs"
+      path: _jobs/
       type: jobs
     values:
       layout: single
@@ -142,7 +150,7 @@ defaults:
       related: false
   # _qualifications
   - scope:
-      path: "_qualifications"
+      path: _qualifications/
       type: qualifications
     values:
       layout: collection
@@ -151,9 +159,31 @@ defaults:
       read_time: false
       comments: false
       related: false
+  # _university
+  - scope:
+      path: _university/
+      type: university
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
+  # _diplomas
+  - scope:
+      path: _diplomas/
+      type: diplomas
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
   # _certificates
   - scope:
-      path: "_certificates"
+      path: _certificates/
       type: certificates
     values:
       layout: single
@@ -161,19 +191,23 @@ defaults:
       share: false
       read_time: false
       comments: false
-      related: true
-
-
-#category_archive:
-#  type: liquid
-#  path: /categories/
-#tag_archive:
-#  type: liquid
-#  path: /tags/
+      related: false
+  # credentials
+  - scope:
+      path: _credentials/
+      type: credentials
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      read_time: false
+      comments: false
+      related: false
 
 collections:
   jobs:
     output: true
+    permalink: /:collection/:path
   projects:
     output: false
   scroller:
@@ -184,10 +218,14 @@ collections:
   qualifications:
     output: false
   university:
-    output: false
+    output: true
+    permalink: /:collection/:path
   diplomas:
-    output: false
+    output: true
+    permalink: /:collection/:path
   certificates:
     output: true
+    permalink: /:collection/:path
   credentials:
-    output: false
+    output: true
+    permalink: /:collection/:path

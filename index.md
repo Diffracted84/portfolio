@@ -15,9 +15,6 @@ header:
   caption: "Image by [Axel Sifuentes](https://pixabay.com/users/axelsteven2000-20170836/) from [Pixabay](https://pixabay.com)"
   excerpt: "Welcome to my Portfolio Site."
 
-intro:
-  - excerpt: "Please select from the following:"
-
 feature_row:
   - image_path: /assets/images/splash/splash-about.png
     alt: "Image of a man working at a desk."
@@ -33,20 +30,20 @@ feature_row:
     url: /projects/
     btn_label: "Read More"
     btn_class: "btn--success"
-  - image_path: /assets/images/splash/splash-qualification.png
-    alt: "Image of man graduating university."
-    title: "Qualifications"
-    excerpt: "Coming Soon" #"Dive into my education and qualifications."
-  #  url: /qualifications/
-  #  btn_label: "Investigate"
-  #  btn_class: "btn--warning"
-  #- image_path: /assets/images/splash/splash-aviation.png
-  #  alt: "Image of a pilot with a plane flying overhead."
-  #  title: "Aviation"
-  #  excerpt: "An overview of my aviation record."
-  #  url: /aviation/
-  #  btn_label: "Check It Out"
-  #  btn_class: "btn--info"
+#  - image_path: /assets/images/splash/splash-qualification.png
+#    alt: "Image of man graduating university."
+#    title: "Qualifications"
+#    excerpt: "Dive into my education and qualifications."
+#    url: /qualifications/
+#    btn_label: "Investigate"
+#    btn_class: "btn--warning"
+#  - image_path: /assets/images/splash/splash-aviation.png
+#    alt: "Image of a pilot with a plane flying overhead."
+#    title: "Aviation"
+#    excerpt: "An overview of my aviation record."
+#    url: /aviation/
+#    btn_label: "Check It Out"
+#    btn_class: "btn--info"
 ---
-    {% include feature_row id="intro" type="center" %}
-    {% include feature_row %}
+Please select from the following:
+{% include feature_row type="left" %}
