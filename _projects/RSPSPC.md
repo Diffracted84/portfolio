@@ -3,7 +3,7 @@ title: RSPS P&C Website
 index: 2
 excerpt: "My volunteer work maintain a website."
 layout: single
-permalink: /projects/rspspc
+permalink: /projects/rspspc.html
 
 author: Casual
 author_profile: true

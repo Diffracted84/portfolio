@@ -2,7 +2,7 @@
 title: Dragon Monkey
 index: 1
 layout: collection
-permalink: /projects/dragon-monkey
+permalink: /projects/dragon-monkey.html
 collection: dragon
 excerpt: "I've decided to develop my own website theme."
 author_profile: true

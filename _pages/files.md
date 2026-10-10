@@ -1,7 +1,7 @@
 ---
 title: Download
 layout: single
-permalink: /files/
+permalink: /files.html
 
 last_modified_at: 2026-06-09T02:55+10:00
 
