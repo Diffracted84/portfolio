@@ -1,6 +1,7 @@
 ---
 title: "Finisar"
 index: 5
+layout: single
 excerpt: "Sydney, Jan 2007 - Jul 2015"
 permalink: /about/Finisar
 

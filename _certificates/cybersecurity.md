@@ -1,9 +1,9 @@
 ---
-title: Googl Cybersecurity
-index: 3
+title: Google Cybersecurity
+index: 1
 layout: single
 permalink: /qualifications/:collection/cybersecurity/
-excerpt: Awarded for successfully completing the Google Cybersecurity Professional Certificate program.
+excerpt: Awarded for successfully completing the Google Cybersecurity Certificate.
 tagline: ""
 
 tags: [Google, Cybersecurity]
@@ -12,7 +12,7 @@ share: false
 related: false
 
 sidebar:
-  - image: /assets/images/qualifications/credentials/google/google_cybersecurity.png
+  - image: /assets/images/qualifications/certifications/google/google_cybersecurity.png
     image_alt: Google Cybersecurity Badge
   
   - title: Type
@@ -26,7 +26,7 @@ classes: wide
 
 header:
   overlay_image: /assets/images/qualifications/credentials/header-gen.png
-  teaser: /assets/images/qualifications/credentials/google/teaser.png
+  teaser: /assets/images/qualifications/certifications/google/teaser.png
 ---
 Awarded for successfully completing the Totara Suite Site Administration program for v19.
 ## Particulars ##

@@ -1,7 +1,8 @@
 ---
 title: Regional Express
 index: 1
-excerpt: Sydney, Aug 2023 - Present
+layout: single
+excerpt: Sydney, Aug 2023 - Sep 2026
 permalink: /about/REX
 
 header:
@@ -16,7 +17,7 @@ sidebar:
     text: "First Officer"
     
   - title: "Employed"
-    text: "Aug 2023 - Present"
+    text: "Aug 2023 - Sep 2026"
 
   - title: "Based"
     text: Sydney, NSW, Australia

@@ -1,6 +1,7 @@
 ---
 title: "Altocap Flight School"
 index: 3
+layout: single
 excerpt: "Camden, Oct 2016 - Jan 2022"
 permalink: /about/Altocap
 

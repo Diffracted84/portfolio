@@ -1,6 +1,7 @@
 ---
 title: Androgogic
 index: 0
+layout: single
 excerpt: Remote, Apr 2026 - Present
 permalink: /about/Androgogic
 

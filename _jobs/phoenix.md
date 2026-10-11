@@ -1,6 +1,7 @@
 ---
 title: "Phoenix Aero Club"
 index: 4
+layout: single
 excerpt: "Camden, Mar 2016 - Oct 2016"
 permalink: /about/PAC
 

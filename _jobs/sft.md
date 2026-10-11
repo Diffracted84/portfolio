@@ -1,6 +1,7 @@
 ---
 title: "Sydney Flight Training"
 index: 2
+layout: single
 excerpt: "Bankstown, Feb 2022 - Jul 2023"
 permalink: /about/SFT
 

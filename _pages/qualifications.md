@@ -20,16 +20,21 @@ header:
   caption: Image by [edith lüthi](https://pixabay.com/users/eluela31-4894494/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2681039) from [Pixabay](https://pixabay.com)
 ---
 <style>
-  .grid__wrapper .archive__item-teaser {
-    width: 100% !important;
+  .grid__wrapper {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .grid__wrapper .archive__item-teaser {
+    width: 100%;
+    display: flex !important;
+    justify-content: left !important;
+    align-items: left !important;
     height: auto !important;
     max-height: 140px !important;
   }
   .grid__wrapper .archive__item-teaser img{
-    max-width: 100% !important;
+    max-width: 75% !important;
     max-height: 140px !important;
     object-fit: contain !important;
   }
@@ -37,29 +42,39 @@ header:
     width: 100% !important;
     align-self: stretch !important;
   }
+
+  .flex-break {
+    clear: both !important;
+    width: 100% !important;
+    height: 0.1rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 </style>
 
 ## University Level
 
-<span style="font-size: 0.7em;">University qualifications</span>
+<span style="font-size: 0.7em;">University qualifications</span><br><br>
+<span style="strong">Coming Soon</span>
 
 <div class="grid__wrapper">
   {% for post in site.university %}
     {% include archive-single.html type="grid" asset_path=post.header.teaser %}
   {% endfor %}
+  <div class="flex-break"></div>
 </div>
-
 
 ## Diploma Level
 
-<span style="font-size: 0.7em;">Diplomas and other higher qualifications</span>
+<span style="font-size: 0.7em;">Diplomas and other higher qualifications</span><br><br>
+<span style="strong">Coming Soon</span>
 
 <div class="grid__wrapper">
   {% for post in site.diplomas %}
     {% include archive-single.html type="grid" asset_path=post.header.teaser %}
   {% endfor %}
+  <div class="flex-break"></div>
 </div>
-
 
 ## Certificates
 
@@ -69,8 +84,8 @@ header:
   {% for post in site.certificates %}
     {% include archive-single.html type="grid" asset_path=post.header.teaser %}
   {% endfor %}
+  <div class="flex-break"></div>
 </div>
-
 
 ## Credentials
 
