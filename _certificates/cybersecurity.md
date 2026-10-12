@@ -1,6 +1,6 @@
 ---
 title: Google Cybersecurity
-index: 1
+index: 0
 layout: single
 permalink: /qualifications/:collection/cybersecurity/
 excerpt: Awarded for successfully completing the Google Cybersecurity Certificate.

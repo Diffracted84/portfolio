@@ -2,28 +2,26 @@
 title: Moodle Admin Basics
 index: 0
 layout: single
-permalink: /qualifications/:collection/moodle_basic_admin/
+slug: moodle-admin-basics
+permalink: /qualifications/:collection/:slug
 excerpt: Awarded for successfully completing the Moodle Academy Moodle Admin Basics program.
 tagline: ""
-
-tags: [LMS, Administrator, Microcredential]
-
+tags:
+  - LMS
+  - Administrator
+  - Microcredential
 share: false
 related: false
-
 sidebar:
   - image: /assets/images/qualifications/credentials/moodle/adminbasics.png
     image_alt: Moodle Admin Basics Badge
-  
   - title: Type
     text: Certification
   - title: Title
     text: Moodle Admin Basics
   - title: Validity
     text: Moodle version 5
-
-classes: full
-
+classes: wide
 header:
   overlay_image: /assets/images/qualifications/credentials/header-gen.png
   teaser: /assets/images/qualifications/credentials/moodle/teaser.svg

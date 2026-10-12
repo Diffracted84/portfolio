@@ -1,29 +1,25 @@
 ---
 title: Totara Site Administrator
-index: 2
+index: 1
 layout: single
-permalink: /qualifications/:collection/totara_admin/
+slug: totara-site-administrator
+permalink: /qualifications/:collection/:slug
 excerpt: Awarded for successfully completing the Totra Community Site Admin program.
 tagline: ""
-
 tags: [LMS, Administrator, Microcredential]
 
 share: false
 related: false
-
 sidebar:
   - image: /assets/images/qualifications/credentials/totara/totara_admin.png
     image_alt: Totara Admin Badge
-  
   - title: Type
     text: Certification
   - title: Title
     text: Totara Site Admin
   - title: Validity
     text: Totara v13-19
-
 classes: wide
-
 header:
   overlay_image: /assets/images/qualifications/credentials/header-gen.png
   teaser: /assets/images/qualifications/credentials/totara/teaser.png
