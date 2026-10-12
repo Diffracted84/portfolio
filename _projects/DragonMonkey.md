@@ -17,4 +17,4 @@ header:
 ---
 I have started making a GitHub Pages theme to learn some new development skills, and to ultimately use on this site. (I currently use a theme called Minimal Mistakes).
 
-**Please stay tuned for semi-regular updates in my game developer adventure.**
+**Please stay tuned for semi-regular updates in my web developer adventure.**
