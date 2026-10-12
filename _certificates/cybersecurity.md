@@ -28,7 +28,7 @@ header:
   overlay_image: /assets/images/qualifications/credentials/header-gen.png
   teaser: /assets/images/qualifications/certifications/google/teaser.png
 ---
-Awarded for successfully completing the Totara Suite Site Administration program for v19.
+Awarded for successfully completing the Google Cybersecurity Professional Certificate program.
 ## Particulars ##
 **Issued:** 28th September 2026
 
